@@ -1,22 +1,21 @@
 <?php
 /**
- * Konfigurasi Koneksi Basis Data PostgreSQL
- * Sistem A: Kasira (Port 5433)
- * Sistem B: Stokara (Port 5434)
+ * Template Konfigurasi Basis Data PostgreSQL Toko Lentera
+ * Salin (copy) berkas ini menjadi `config/database.php` lalu sesuaikan kredensial Anda.
  */
 
 class Database {
     private static $kasiraHost = '127.0.0.1';
-    private static $kasiraPort = '5433';
+    private static $kasiraPort = '5432';
     private static $kasiraDb   = 'kasira_db';
-    private static $kasiraUser = 'lentera';
-    private static $kasiraPass = 'lentera123';
+    private static $kasiraUser = 'postgres';
+    private static $kasiraPass = 'password_anda';
 
     private static $stokaraHost = '127.0.0.1';
-    private static $stokaraPort = '5434';
+    private static $stokaraPort = '5432';
     private static $stokaraDb   = 'stokara_db';
-    private static $stokaraUser = 'lentera';
-    private static $stokaraPass = 'lentera123';
+    private static $stokaraUser = 'postgres';
+    private static $stokaraPass = 'password_anda';
 
     public static function getKasiraConnection() {
         try {

@@ -22,6 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             try {
                 $pdo->beginTransaction();
 
+                // Pastikan sequence auto-increment PostgreSQL selaras dengan MAX(id) eksisting
+                $pdo->exec("SELECT setval(pg_get_serial_sequence('item_transaksi', 'id'), COALESCE((SELECT MAX(id) FROM item_transaksi), 1))");
+
                 // Simpan transaksi
                 $stmtTrx = $pdo->prepare("INSERT INTO transaksi (id, tanggal, nama_kasir) VALUES (?, ?, ?)");
                 $stmtTrx->execute([$idTrx, $tanggalKasira, $namaKasir]);

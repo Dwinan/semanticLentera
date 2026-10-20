@@ -53,6 +53,7 @@ Aplikasi ini dirancang untuk menjawab 3 pertanyaan operasional yang **wajib memb
 
 ```text
 semanticLentera/
+├── .gitignore                # Mengabaikan config/database.php & file sensitif
 ├── index.php                 # Halaman portal utama & ringkasan status
 ├── dokumen_rancangan.md      # Laporan lengkap arsitektur semantik & rubrik evaluasi
 ├── README.md                 # Panduan penggunaan & arsitektur proyek
@@ -60,7 +61,8 @@ semanticLentera/
 │   ├── css/style.css         # Styling antarmuka web modern & responsif
 │   └── js/main.js            # Skrip pembantu interaktivitas frontend
 ├── config/
-│   └── database.php          # Konfigurasi koneksi PDO PostgreSQL kedua sistem
+│   ├── database.example.php  # Template konfigurasi basis data (terlacak Git)
+│   └── database.php          # Konfigurasi koneksi lokal aktif (diabaikan .gitignore)
 ├── kasira/
 │   └── index.php             # Aplikasi Kasir (Point of Sale)
 ├── stokara/
@@ -104,8 +106,14 @@ semanticLentera/
    * Buka database `kasira_db`, jalankan seluruh kueri dari berkas `sql/init_kasira.sql`.
    * Buka database `stokara_db`, jalankan seluruh kueri dari berkas `sql/init_stokara.sql`.
 
-3. **Sesuaikan Konfigurasi Koneksi**:
-   Buka berkas `config/database.php`, sesuaikan port (biasanya `5432`) serta username dan password PostgreSQL lokal Anda:
+3. **Salin & Sesuaikan Konfigurasi Koneksi**:
+   Salin berkas template `config/database.example.php` menjadi `config/database.php`:
+   ```bash
+   cp config/database.example.php config/database.php
+   ```
+   *(Atau di Windows Explorer, copy berkas `database.example.php` lalu rename menjadi `database.php`)*.
+
+   Buka berkas `config/database.php`, lalu sesuaikan port (biasanya `5432`), user (`postgres`), dan password PostgreSQL lokal Anda:
    ```php
    private static $kasiraHost = '127.0.0.1';
    private static $kasiraPort = '5432';
@@ -119,6 +127,8 @@ semanticLentera/
    private static $stokaraUser = 'postgres';       // sesuaikan
    private static $stokaraPass = 'password_anda';  // sesuaikan
    ```
+
+   > **Keamanan**: Berkas `config/database.php` telah dimasukkan ke `.gitignore`, sehingga kata sandi basis data Anda tidak akan terunggah (*leak*) saat melakukan `git push`.
 
 ---
 

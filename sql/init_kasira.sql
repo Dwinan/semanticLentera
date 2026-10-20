@@ -131,3 +131,7 @@ INSERT INTO item_transaksi (id, id_transaksi, barcode, qty) VALUES
 (63, 'T023', '8991001000080', 2),
 (64, 'T024', '8991001000011', 3),
 (65, 'T025', '8991001000127', 4);
+
+-- Sinkronkan sequence auto-increment id setelah impor data manual
+SELECT setval(pg_get_serial_sequence('item_transaksi', 'id'), (SELECT MAX(id) FROM item_transaksi));
+

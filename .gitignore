@@ -1,0 +1,25 @@
+# Kredensial Sensitif & Konfigurasi Basis Data
+config/database.php
+.env
+.env.local
+
+# Dump & Cadangan Basis Data
+*.sql.gz
+*.sql.bak
+*.dump
+*.bak
+*.backup
+backups/
+
+# Log & Debugging
+*.log
+error_log
+
+# File Sistem Operasi & IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.suo
+*.user
