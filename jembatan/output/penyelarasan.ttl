@@ -1,0 +1,26 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000011> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000028> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000035> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000042> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000059> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000066> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000066> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000073> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000073> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000080> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000097> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000103> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000103> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000110> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000110> .
+
+<https://data.lentera.example/id/kasira/produk/8991001000127> owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000127> .
+

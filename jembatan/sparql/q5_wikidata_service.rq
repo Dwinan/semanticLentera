@@ -1,0 +1,23 @@
+# Kueri 5: SERVICE Terfederasi ke Wikidata (query.wikidata.org/sparql)
+# Tujuan: Mengambil label resmi bahasa Inggris dari Wikidata untuk kategori produk Toko Lentera.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?kategoriLokal ?labelId ?qidWikidata ?labelInggrisWikidata
+WHERE {
+    # 1. Ikat variabel lokal lebih dulu
+    ?kategoriLokal a skos:Concept ;
+                   skos:inScheme <https://data.lentera.example/id/kategori/skema-utama> ;
+                   skos:prefLabel ?labelId ;
+                   skos:exactMatch ?qidWikidata .
+    FILTER(LANG(?labelId) = "id")
+
+    # 2. Panggil SERVICE luar untuk QID yang terikat
+    SERVICE <https://query.wikidata.org/sparql> {
+        ?qidWikidata rdfs:label ?labelInggrisWikidata .
+        FILTER(LANG(?labelInggrisWikidata) = "en")
+    }
+}
+ORDER BY ?kategoriLokal
+LIMIT 10

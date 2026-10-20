@@ -1,0 +1,2189 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://data.lentera.example/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:creator owl:sameAs dcterms:creator .
+
+dcterms:date owl:sameAs dcterms:date .
+
+dcterms:isPartOf owl:sameAs dcterms:isPartOf .
+
+rdf:HTML a rdfs:Datatype ;
+    owl:sameAs rdf:HTML .
+
+rdf:PlainLiteral a rdfs:Datatype ;
+    owl:sameAs rdf:PlainLiteral .
+
+rdf:XMLLiteral a rdfs:Datatype ;
+    owl:sameAs rdf:XMLLiteral .
+
+rdf:langString a rdfs:Datatype ;
+    owl:sameAs rdf:langString .
+
+rdf:type owl:sameAs rdf:type .
+
+rdf:value owl:sameAs rdf:value .
+
+rdfs:Literal a rdfs:Datatype ;
+    owl:sameAs rdfs:Literal .
+
+rdfs:comment a owl:AnnotationProperty ;
+    owl:sameAs rdfs:comment .
+
+rdfs:domain owl:sameAs rdfs:domain .
+
+rdfs:isDefinedBy a owl:AnnotationProperty ;
+    owl:sameAs rdfs:isDefinedBy .
+
+rdfs:range owl:sameAs rdfs:range .
+
+rdfs:seeAlso a owl:AnnotationProperty ;
+    owl:sameAs rdfs:seeAlso .
+
+rdfs:subClassOf owl:sameAs rdfs:subClassOf .
+
+rdfs:subPropertyOf owl:sameAs rdfs:subPropertyOf .
+
+xsd:NCName a rdfs:Datatype ;
+    owl:sameAs xsd:NCName .
+
+xsd:NMTOKEN a rdfs:Datatype ;
+    owl:sameAs xsd:NMTOKEN .
+
+xsd:Name a rdfs:Datatype ;
+    owl:sameAs xsd:Name .
+
+xsd:anyURI a rdfs:Datatype ;
+    owl:sameAs xsd:anyURI .
+
+xsd:base64Binary a rdfs:Datatype ;
+    owl:sameAs xsd:base64Binary .
+
+xsd:boolean a rdfs:Datatype ;
+    owl:sameAs xsd:boolean .
+
+xsd:byte a rdfs:Datatype ;
+    owl:sameAs xsd:byte .
+
+xsd:dateTime a rdfs:Datatype ;
+    owl:sameAs xsd:dateTime .
+
+xsd:dateTimeStamp a rdfs:Datatype ;
+    owl:sameAs xsd:dateTimeStamp .
+
+xsd:double a rdfs:Datatype ;
+    owl:sameAs xsd:double .
+
+xsd:float a rdfs:Datatype ;
+    owl:sameAs xsd:float .
+
+xsd:hexBinary a rdfs:Datatype ;
+    owl:sameAs xsd:hexBinary .
+
+xsd:int a rdfs:Datatype ;
+    owl:sameAs xsd:int .
+
+xsd:language a rdfs:Datatype ;
+    owl:sameAs xsd:language .
+
+xsd:long a rdfs:Datatype ;
+    owl:sameAs xsd:long .
+
+xsd:negativeInteger a rdfs:Datatype ;
+    owl:sameAs xsd:negativeInteger .
+
+xsd:nonNegativeInteger a rdfs:Datatype ;
+    owl:sameAs xsd:nonNegativeInteger .
+
+xsd:nonPositiveInteger a rdfs:Datatype ;
+    owl:sameAs xsd:nonPositiveInteger .
+
+xsd:normalizedString a rdfs:Datatype ;
+    owl:sameAs xsd:normalizedString .
+
+xsd:positiveInteger a rdfs:Datatype ;
+    owl:sameAs xsd:positiveInteger .
+
+xsd:short a rdfs:Datatype ;
+    owl:sameAs xsd:short .
+
+xsd:time a rdfs:Datatype ;
+    owl:sameAs xsd:time .
+
+xsd:token a rdfs:Datatype ;
+    owl:sameAs xsd:token .
+
+xsd:unsignedByte a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedByte .
+
+xsd:unsignedInt a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedInt .
+
+xsd:unsignedLong a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedLong .
+
+xsd:unsignedShort a rdfs:Datatype ;
+    owl:sameAs xsd:unsignedShort .
+
+owl:backwardCompatibleWith a owl:AnnotationProperty ;
+    owl:sameAs owl:backwardCompatibleWith .
+
+owl:deprecated a owl:AnnotationProperty ;
+    owl:sameAs owl:deprecated .
+
+owl:disjointWith owl:sameAs owl:disjointWith .
+
+owl:equivalentClass owl:sameAs owl:equivalentClass .
+
+owl:equivalentProperty owl:sameAs owl:equivalentProperty .
+
+owl:incompatibleWith a owl:AnnotationProperty ;
+    owl:sameAs owl:incompatibleWith .
+
+owl:inverseOf owl:sameAs owl:inverseOf .
+
+owl:priorVersion a owl:AnnotationProperty ;
+    owl:sameAs owl:priorVersion .
+
+owl:sameAs owl:sameAs owl:sameAs .
+
+owl:versionInfo a owl:AnnotationProperty ;
+    owl:sameAs owl:versionInfo .
+
+<https://data.lentera.example/def> a owl:Ontology ;
+    rdfs:label "Ontologi Jembatan Semantik Toko Lentera"@id ;
+    rdfs:comment "Ontologi penghubung sistem kasir Kasira dan sistem inventaris Stokara."@id ;
+    owl:sameAs <https://data.lentera.example/def> ;
+    schema:name "Ontologi Jembatan Semantik Toko Lentera"@id .
+
+<https://data.lentera.example/id/item/T001-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T001> ;
+    owl:sameAs <https://data.lentera.example/id/item/T001-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/item/T001-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T001> ;
+    owl:sameAs <https://data.lentera.example/id/item/T001-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/item/T001-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T001> ;
+    owl:sameAs <https://data.lentera.example/id/item/T001-3> ;
+    schema:orderQuantity 1 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/item/T002-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T002> ;
+    owl:sameAs <https://data.lentera.example/id/item/T002-1> ;
+    schema:orderQuantity 4 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000028>,
+        <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/item/T002-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T002> ;
+    owl:sameAs <https://data.lentera.example/id/item/T002-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/item/T003-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T003> ;
+    owl:sameAs <https://data.lentera.example/id/item/T003-1> ;
+    schema:orderQuantity 5 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000035>,
+        <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/item/T003-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T003> ;
+    owl:sameAs <https://data.lentera.example/id/item/T003-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000042>,
+        <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/item/T003-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T003> ;
+    owl:sameAs <https://data.lentera.example/id/item/T003-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000066>,
+        <https://data.lentera.example/id/stokara/barang/8991001000066> .
+
+<https://data.lentera.example/id/item/T004-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T004> ;
+    owl:sameAs <https://data.lentera.example/id/item/T004-1> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/item/T004-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T004> ;
+    owl:sameAs <https://data.lentera.example/id/item/T004-2> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000103>,
+        <https://data.lentera.example/id/stokara/barang/8991001000103> .
+
+<https://data.lentera.example/id/item/T004-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T004> ;
+    owl:sameAs <https://data.lentera.example/id/item/T004-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000110>,
+        <https://data.lentera.example/id/stokara/barang/8991001000110> .
+
+<https://data.lentera.example/id/item/T005-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T005> ;
+    owl:sameAs <https://data.lentera.example/id/item/T005-1> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/item/T005-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T005> ;
+    owl:sameAs <https://data.lentera.example/id/item/T005-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000127>,
+        <https://data.lentera.example/id/stokara/barang/8991001000127> .
+
+<https://data.lentera.example/id/item/T006-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T006> ;
+    owl:sameAs <https://data.lentera.example/id/item/T006-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/item/T006-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T006> ;
+    owl:sameAs <https://data.lentera.example/id/item/T006-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000073>,
+        <https://data.lentera.example/id/stokara/barang/8991001000073> .
+
+<https://data.lentera.example/id/item/T006-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T006> ;
+    owl:sameAs <https://data.lentera.example/id/item/T006-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000134> .
+
+<https://data.lentera.example/id/item/T007-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T007> ;
+    owl:sameAs <https://data.lentera.example/id/item/T007-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/item/T007-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T007> ;
+    owl:sameAs <https://data.lentera.example/id/item/T007-2> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000028>,
+        <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/item/T007-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T007> ;
+    owl:sameAs <https://data.lentera.example/id/item/T007-3> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/item/T008-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T008> ;
+    owl:sameAs <https://data.lentera.example/id/item/T008-1> ;
+    schema:orderQuantity 4 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000035>,
+        <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/item/T008-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T008> ;
+    owl:sameAs <https://data.lentera.example/id/item/T008-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000042>,
+        <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/item/T008-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T008> ;
+    owl:sameAs <https://data.lentera.example/id/item/T008-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000141> .
+
+<https://data.lentera.example/id/item/T009-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T009> ;
+    owl:sameAs <https://data.lentera.example/id/item/T009-1> ;
+    schema:orderQuantity 1 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/item/T009-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T009> ;
+    owl:sameAs <https://data.lentera.example/id/item/T009-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/item/T009-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T009> ;
+    owl:sameAs <https://data.lentera.example/id/item/T009-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000103>,
+        <https://data.lentera.example/id/stokara/barang/8991001000103> .
+
+<https://data.lentera.example/id/item/T010-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T010> ;
+    owl:sameAs <https://data.lentera.example/id/item/T010-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/item/T010-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T010> ;
+    owl:sameAs <https://data.lentera.example/id/item/T010-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000066>,
+        <https://data.lentera.example/id/stokara/barang/8991001000066> .
+
+<https://data.lentera.example/id/item/T011-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T011> ;
+    owl:sameAs <https://data.lentera.example/id/item/T011-1> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/item/T011-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T011> ;
+    owl:sameAs <https://data.lentera.example/id/item/T011-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000110>,
+        <https://data.lentera.example/id/stokara/barang/8991001000110> .
+
+<https://data.lentera.example/id/item/T011-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T011> ;
+    owl:sameAs <https://data.lentera.example/id/item/T011-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000127>,
+        <https://data.lentera.example/id/stokara/barang/8991001000127> .
+
+<https://data.lentera.example/id/item/T012-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T012> ;
+    owl:sameAs <https://data.lentera.example/id/item/T012-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000028>,
+        <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/item/T012-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T012> ;
+    owl:sameAs <https://data.lentera.example/id/item/T012-2> ;
+    schema:orderQuantity 4 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000035>,
+        <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/item/T012-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T012> ;
+    owl:sameAs <https://data.lentera.example/id/item/T012-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000158> .
+
+<https://data.lentera.example/id/item/T013-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T013> ;
+    owl:sameAs <https://data.lentera.example/id/item/T013-1> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000042>,
+        <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/item/T013-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T013> ;
+    owl:sameAs <https://data.lentera.example/id/item/T013-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000073>,
+        <https://data.lentera.example/id/stokara/barang/8991001000073> .
+
+<https://data.lentera.example/id/item/T013-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T013> ;
+    owl:sameAs <https://data.lentera.example/id/item/T013-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/item/T014-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T014> ;
+    owl:sameAs <https://data.lentera.example/id/item/T014-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/item/T014-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T014> ;
+    owl:sameAs <https://data.lentera.example/id/item/T014-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/item/T014-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T014> ;
+    owl:sameAs <https://data.lentera.example/id/item/T014-3> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/item/T015-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T015> ;
+    owl:sameAs <https://data.lentera.example/id/item/T015-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000103>,
+        <https://data.lentera.example/id/stokara/barang/8991001000103> .
+
+<https://data.lentera.example/id/item/T015-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T015> ;
+    owl:sameAs <https://data.lentera.example/id/item/T015-2> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000134> .
+
+<https://data.lentera.example/id/item/T016-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T016> ;
+    owl:sameAs <https://data.lentera.example/id/item/T016-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000028>,
+        <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/item/T016-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T016> ;
+    owl:sameAs <https://data.lentera.example/id/item/T016-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000066>,
+        <https://data.lentera.example/id/stokara/barang/8991001000066> .
+
+<https://data.lentera.example/id/item/T016-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T016> ;
+    owl:sameAs <https://data.lentera.example/id/item/T016-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000127>,
+        <https://data.lentera.example/id/stokara/barang/8991001000127> .
+
+<https://data.lentera.example/id/item/T017-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T017> ;
+    owl:sameAs <https://data.lentera.example/id/item/T017-1> ;
+    schema:orderQuantity 4 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000035>,
+        <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/item/T017-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T017> ;
+    owl:sameAs <https://data.lentera.example/id/item/T017-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000042>,
+        <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/item/T017-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T017> ;
+    owl:sameAs <https://data.lentera.example/id/item/T017-3> ;
+    schema:orderQuantity 1 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/item/T018-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T018> ;
+    owl:sameAs <https://data.lentera.example/id/item/T018-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/item/T018-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T018> ;
+    owl:sameAs <https://data.lentera.example/id/item/T018-2> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/item/T018-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T018> ;
+    owl:sameAs <https://data.lentera.example/id/item/T018-3> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000141> .
+
+<https://data.lentera.example/id/item/T019-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T019> ;
+    owl:sameAs <https://data.lentera.example/id/item/T019-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/item/T019-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T019> ;
+    owl:sameAs <https://data.lentera.example/id/item/T019-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000073>,
+        <https://data.lentera.example/id/stokara/barang/8991001000073> .
+
+<https://data.lentera.example/id/item/T019-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T019> ;
+    owl:sameAs <https://data.lentera.example/id/item/T019-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000110>,
+        <https://data.lentera.example/id/stokara/barang/8991001000110> .
+
+<https://data.lentera.example/id/item/T020-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T020> ;
+    owl:sameAs <https://data.lentera.example/id/item/T020-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000028>,
+        <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/item/T020-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T020> ;
+    owl:sameAs <https://data.lentera.example/id/item/T020-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/item/T020-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T020> ;
+    owl:sameAs <https://data.lentera.example/id/item/T020-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000158> .
+
+<https://data.lentera.example/id/item/T021-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T021> ;
+    owl:sameAs <https://data.lentera.example/id/item/T021-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/item/T021-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T021> ;
+    owl:sameAs <https://data.lentera.example/id/item/T021-2> ;
+    schema:orderQuantity 4 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000035>,
+        <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/item/T021-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T021> ;
+    owl:sameAs <https://data.lentera.example/id/item/T021-3> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000042>,
+        <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/item/T022-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T022> ;
+    owl:sameAs <https://data.lentera.example/id/item/T022-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/item/T022-2> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T022> ;
+    owl:sameAs <https://data.lentera.example/id/item/T022-2> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000066>,
+        <https://data.lentera.example/id/stokara/barang/8991001000066> .
+
+<https://data.lentera.example/id/item/T022-3> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T022> ;
+    owl:sameAs <https://data.lentera.example/id/item/T022-3> ;
+    schema:orderQuantity 4 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/item/T023-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T023> ;
+    owl:sameAs <https://data.lentera.example/id/item/T023-1> ;
+    schema:orderQuantity 2 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/item/T024-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T024> ;
+    owl:sameAs <https://data.lentera.example/id/item/T024-1> ;
+    schema:orderQuantity 3 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/item/T025-1> a schema:OrderItem ;
+    dcterms:isPartOf <https://data.lentera.example/id/transaksi/T025> ;
+    owl:sameAs <https://data.lentera.example/id/item/T025-1> ;
+    schema:orderQuantity 4 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000127>,
+        <https://data.lentera.example/id/stokara/barang/8991001000127> .
+
+schema:addressLocality owl:sameAs schema:addressLocality .
+
+schema:category owl:sameAs schema:category .
+
+schema:orderQuantity owl:sameAs schema:orderQuantity .
+
+schema:orderedItem owl:sameAs schema:orderedItem .
+
+schema:price owl:sameAs schema:price .
+
+owl:Ontology owl:sameAs owl:Ontology .
+
+<https://data.lentera.example/id/penerimaan/PB01> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-02-25"^^xsd:date ;
+    rdf:value 20 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB01> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 10200.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/penerimaan/PB02> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-10"^^xsd:date ;
+    rdf:value 20 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB02> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 10500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/penerimaan/PB03> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-02-26"^^xsd:date ;
+    rdf:value 25 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB03> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 4300.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000028>,
+        <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/penerimaan/PB04> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-11"^^xsd:date ;
+    rdf:value 25 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB04> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 4500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000028>,
+        <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/penerimaan/PB05> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-02-27"^^xsd:date ;
+    rdf:value 40 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB05> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 2400.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000035>,
+        <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/penerimaan/PB06> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-12"^^xsd:date ;
+    rdf:value 40 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB06> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 2500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000035>,
+        <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/penerimaan/PB07> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-02-28"^^xsd:date ;
+    rdf:value 15 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB07> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 16500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000042>,
+        <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/penerimaan/PB08> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-12"^^xsd:date ;
+    rdf:value 15 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB08> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 17000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000042>,
+        <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/penerimaan/PB09> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-02-28"^^xsd:date ;
+    rdf:value 20 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB09> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P03> ;
+    ex:hargaBeli 8200.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/penerimaan/PB10> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-13"^^xsd:date ;
+    rdf:value 15 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB10> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P03> ;
+    ex:hargaBeli 8500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/penerimaan/PB11> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-01"^^xsd:date ;
+    rdf:value 35 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB11> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P03> ;
+    ex:hargaBeli 7000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000066>,
+        <https://data.lentera.example/id/stokara/barang/8991001000066> .
+
+<https://data.lentera.example/id/penerimaan/PB12> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-02"^^xsd:date ;
+    rdf:value 30 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB12> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P03> ;
+    ex:hargaBeli 13000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000073>,
+        <https://data.lentera.example/id/stokara/barang/8991001000073> .
+
+<https://data.lentera.example/id/penerimaan/PB13> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-02-25"^^xsd:date ;
+    rdf:value 12 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB13> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 60000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/penerimaan/PB14> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-14"^^xsd:date ;
+    rdf:value 10 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB14> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 61000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/penerimaan/PB15> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-02-26"^^xsd:date ;
+    rdf:value 20 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB15> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 15800.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/penerimaan/PB16> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-14"^^xsd:date ;
+    rdf:value 20 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB16> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 16000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/penerimaan/PB17> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-03"^^xsd:date ;
+    rdf:value 40 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB17> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 14500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000103>,
+        <https://data.lentera.example/id/stokara/barang/8991001000103> .
+
+<https://data.lentera.example/id/penerimaan/PB18> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-04"^^xsd:date ;
+    rdf:value 30 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB18> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P04> ;
+    ex:hargaBeli 11500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000110>,
+        <https://data.lentera.example/id/stokara/barang/8991001000110> .
+
+<https://data.lentera.example/id/penerimaan/PB19> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-05"^^xsd:date ;
+    rdf:value 25 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB19> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P04> ;
+    ex:hargaBeli 15500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/kasira/produk/8991001000127>,
+        <https://data.lentera.example/id/stokara/barang/8991001000127> .
+
+<https://data.lentera.example/id/penerimaan/PB20> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-06"^^xsd:date ;
+    rdf:value 20 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB20> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 15000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000936> .
+
+<https://data.lentera.example/id/penerimaan/PB21> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-07"^^xsd:date ;
+    rdf:value 20 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB21> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P04> ;
+    ex:hargaBeli 12000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000172> .
+
+<https://data.lentera.example/id/penerimaan/PB22> a owl:Thing,
+        ex:PenerimaanBarang ;
+    dcterms:date "2026-03-08"^^xsd:date ;
+    rdf:value 25 ;
+    owl:sameAs <https://data.lentera.example/id/penerimaan/PB22> ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 9500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000189> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000172> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "KARBOL PINUS LANTAI 800 ML"@id ;
+    dcterms:identifier "8991001000172"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000172> ;
+    ex:stokMinimum 15 ;
+    schema:category <https://data.lentera.example/id/kategori/pembersih> ;
+    schema:gtin13 "8991001000172"^^xsd:string ;
+    schema:name "KARBOL PINUS LANTAI 800 ML"@id .
+
+<https://data.lentera.example/id/stokara/barang/8991001000189> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "TEH HIJAU CELUP ISI 25"@id ;
+    dcterms:identifier "8991001000189"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000189> ;
+    ex:stokMinimum 20 ;
+    schema:gtin13 "8991001000189"^^xsd:string ;
+    schema:name "TEH HIJAU CELUP ISI 25"@id .
+
+<https://data.lentera.example/id/stokara/barang/8991001000936> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "SUSU UHT COKELAT"@id ;
+    dcterms:identifier "8991001000936"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/stokara/barang/8991001000936> ;
+    ex:stokMinimum 15 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> ;
+    schema:gtin13 "8991001000936"^^xsd:string ;
+    schema:name "SUSU UHT COKELAT"@id .
+
+<https://data.lentera.example/id/transaksi/T023> a schema:Order ;
+    dcterms:creator "Budi"@id ;
+    dcterms:date "2026-03-14"^^xsd:date ;
+    dcterms:identifier "T023"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T023> ;
+    schema:gtin13 "T023"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T024> a schema:Order ;
+    dcterms:creator "Rina"@id ;
+    dcterms:date "2026-03-15"^^xsd:date ;
+    dcterms:identifier "T024"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T024> ;
+    schema:gtin13 "T024"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T025> a schema:Order ;
+    dcterms:creator "Sari"@id ;
+    dcterms:date "2026-03-15"^^xsd:date ;
+    dcterms:identifier "T025"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T025> ;
+    schema:gtin13 "T025"^^xsd:string .
+
+"2026-02-27"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-02-27"^^xsd:date .
+
+"2026-03-09"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-09"^^xsd:date .
+
+5 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 5 .
+
+10 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 10 .
+
+12 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 12 .
+
+35 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 35 .
+
+2400.00 a xsd:decimal ;
+    owl:sameAs 2400.00 .
+
+2500.00 a xsd:decimal ;
+    owl:sameAs 2500.00 .
+
+4300.00 a xsd:decimal ;
+    owl:sameAs 4300.00 .
+
+4500.00 a xsd:decimal ;
+    owl:sameAs 4500.00 .
+
+5000.00 a xsd:decimal ;
+    owl:sameAs 5000.00 .
+
+7000.00 a xsd:decimal ;
+    owl:sameAs 7000.00 .
+
+8000.00 a xsd:decimal ;
+    owl:sameAs 8000.00 .
+
+8200.00 a xsd:decimal ;
+    owl:sameAs 8200.00 .
+
+8500.00 a xsd:decimal ;
+    owl:sameAs 8500.00 .
+
+9500.00 a xsd:decimal ;
+    owl:sameAs 9500.00 .
+
+10200.00 a xsd:decimal ;
+    owl:sameAs 10200.00 .
+
+10500.00 a xsd:decimal ;
+    owl:sameAs 10500.00 .
+
+11500.00 a xsd:decimal ;
+    owl:sameAs 11500.00 .
+
+12000.00 a xsd:decimal ;
+    owl:sameAs 12000.00 .
+
+13000.00 a xsd:decimal ;
+    owl:sameAs 13000.00 .
+
+14000.00 a xsd:decimal ;
+    owl:sameAs 14000.00 .
+
+14500.00 a xsd:decimal ;
+    owl:sameAs 14500.00 .
+
+15500.00 a xsd:decimal ;
+    owl:sameAs 15500.00 .
+
+15800.00 a xsd:decimal ;
+    owl:sameAs 15800.00 .
+
+16500.00 a xsd:decimal ;
+    owl:sameAs 16500.00 .
+
+17000.00 a xsd:decimal ;
+    owl:sameAs 17000.00 .
+
+60000.00 a xsd:decimal ;
+    owl:sameAs 60000.00 .
+
+61000.00 a xsd:decimal ;
+    owl:sameAs 61000.00 .
+
+"Ambang batas jumlah stok terendah di gudang sebelum barang wajib dipesan ulang."@id owl:sameAs "Ambang batas jumlah stok terendah di gudang sebelum barang wajib dipesan ulang."@id .
+
+"Bandar Lampung"@id owl:sameAs "Bandar Lampung"@id .
+
+"Harga pokok pembelian per unit barang pada saat penerimaan stok dari pemasok."@id owl:sameAs "Harga pokok pembelian per unit barang pada saat penerimaan stok dari pemasok."@id .
+
+"Jakarta"@id owl:sameAs "Jakarta"@id .
+
+"Kejadian pencatatan barang masuk dari pemasok ke gudang beserta kuantitas dan harga beli."@id owl:sameAs "Kejadian pencatatan barang masuk dari pemasok ke gudang beserta kuantitas dan harga beli."@id .
+
+"Menghubungkan catatan penerimaan barang dengan organisasi pemasok yang mengirimkannya."@id owl:sameAs "Menghubungkan catatan penerimaan barang dengan organisasi pemasok yang mengirimkannya."@id .
+
+"Metro"@id owl:sameAs "Metro"@id .
+
+"Ontologi penghubung sistem kasir Kasira dan sistem inventaris Stokara."@id owl:sameAs "Ontologi penghubung sistem kasir Kasira dan sistem inventaris Stokara."@id .
+
+"Palembang"@id owl:sameAs "Palembang"@id .
+
+"Properti kebalikan yang menghubungkan organisasi pemasok ke catatan penerimaan barang."@id owl:sameAs "Properti kebalikan yang menghubungkan organisasi pemasok ke catatan penerimaan barang."@id .
+
+"Representasi barang fisik yang tercatat pada sistem inventaris Stokara."@id owl:sameAs "Representasi barang fisik yang tercatat pada sistem inventaris Stokara."@id .
+
+"Representasi produk dagangan yang tercatat pada sistem kasir Kasira."@id owl:sameAs "Representasi produk dagangan yang tercatat pada sistem kasir Kasira."@id .
+
+"Selisih antara harga jual ritel di Kasira dan harga beli terakhir di Stokara."@id owl:sameAs "Selisih antara harga jual ritel di Kasira dan harga beli terakhir di Stokara."@id .
+
+rdfs:label a owl:AnnotationProperty ;
+    rdfs:subPropertyOf schema:name ;
+    owl:equivalentProperty schema:name ;
+    owl:sameAs rdfs:label .
+
+owl:InverseFunctionalProperty owl:sameAs owl:InverseFunctionalProperty .
+
+owl:Nothing a owl:Class ;
+    rdfs:subClassOf owl:Nothing,
+        owl:Thing,
+        ex:Barang,
+        ex:PenerimaanBarang,
+        ex:ProdukJual,
+        schema:Product ;
+    owl:equivalentClass owl:Nothing ;
+    owl:sameAs owl:Nothing .
+
+owl:ObjectProperty owl:sameAs owl:ObjectProperty .
+
+ex:hargaBeli a owl:DatatypeProperty ;
+    rdfs:label "harga beli satuan"@id ;
+    rdfs:comment "Harga pokok pembelian per unit barang pada saat penerimaan stok dari pemasok."@id ;
+    rdfs:domain owl:Thing,
+        ex:PenerimaanBarang ;
+    rdfs:range xsd:decimal ;
+    rdfs:subPropertyOf ex:hargaBeli ;
+    owl:equivalentProperty ex:hargaBeli ;
+    owl:sameAs ex:hargaBeli ;
+    schema:name "harga beli satuan"@id .
+
+ex:marginPerUnit a owl:DatatypeProperty ;
+    rdfs:label "margin kotor per unit"@id ;
+    rdfs:comment "Selisih antara harga jual ritel di Kasira dan harga beli terakhir di Stokara."@id ;
+    rdfs:domain schema:Product ;
+    rdfs:range xsd:decimal ;
+    rdfs:subPropertyOf ex:marginPerUnit ;
+    owl:equivalentProperty ex:marginPerUnit ;
+    owl:sameAs ex:marginPerUnit ;
+    schema:name "margin kotor per unit"@id .
+
+ex:stokMinimum a owl:DatatypeProperty ;
+    rdfs:label "stok minimum"@id ;
+    rdfs:comment "Ambang batas jumlah stok terendah di gudang sebelum barang wajib dipesan ulang."@id ;
+    rdfs:domain schema:Product ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf ex:stokMinimum ;
+    owl:equivalentProperty ex:stokMinimum ;
+    owl:sameAs ex:stokMinimum ;
+    schema:name "stok minimum"@id .
+
+<https://data.lentera.example/id/kasira/produk/8991001000134> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "Susu UHT Cokelat"@id ;
+    dcterms:identifier "8991001000134"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000134> ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> ;
+    schema:gtin13 "8991001000134"^^xsd:string ;
+    schema:name "Susu UHT Cokelat"@id ;
+    schema:price 8000.00 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000141> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "Roti Sobek Cokelat Lentera"@id ;
+    dcterms:identifier "8991001000141"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000141> ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> ;
+    schema:gtin13 "8991001000141"^^xsd:string ;
+    schema:name "Roti Sobek Cokelat Lentera"@id ;
+    schema:price 14000.00 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000158> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "Tas Belanja Lipat Lentera"@id ;
+    dcterms:identifier "8991001000158"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000158> ;
+    schema:gtin13 "8991001000158"^^xsd:string ;
+    schema:name "Tas Belanja Lipat Lentera"@id ;
+    schema:price 5000.00 .
+
+<https://data.lentera.example/id/kategori/minuman-seduh> owl:sameAs <https://data.lentera.example/id/kategori/minuman-seduh> .
+
+<https://data.lentera.example/id/transaksi/T002> a schema:Order ;
+    dcterms:creator "Budi"@id ;
+    dcterms:date "2026-03-01"^^xsd:date ;
+    dcterms:identifier "T002"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T002> ;
+    schema:gtin13 "T002"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T005> a schema:Order ;
+    dcterms:date "2026-03-03"^^xsd:date ;
+    dcterms:identifier "T005"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T005> ;
+    schema:gtin13 "T005"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T010> a schema:Order ;
+    dcterms:date "2026-03-05"^^xsd:date ;
+    dcterms:identifier "T010"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T010> ;
+    schema:gtin13 "T010"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T015> a schema:Order ;
+    dcterms:creator "Sari"@id ;
+    dcterms:date "2026-03-08"^^xsd:date ;
+    dcterms:identifier "T015"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T015> ;
+    schema:gtin13 "T015"^^xsd:string .
+
+"2026-02-25"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-02-25"^^xsd:date .
+
+"2026-02-26"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-02-26"^^xsd:date .
+
+"2026-02-28"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-02-28"^^xsd:date .
+
+"2026-03-10"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-10"^^xsd:date .
+
+"2026-03-11"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-11"^^xsd:date .
+
+"2026-03-13"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-13"^^xsd:date .
+
+"2026-03-15"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-15"^^xsd:date .
+
+50 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 50 .
+
+4000.00 a xsd:decimal ;
+    owl:sameAs 4000.00 .
+
+6500.00 a xsd:decimal ;
+    owl:sameAs 6500.00 .
+
+10000.00 a xsd:decimal ;
+    owl:sameAs 10000.00 .
+
+12500.00 a xsd:decimal ;
+    owl:sameAs 12500.00 .
+
+17500.00 a xsd:decimal ;
+    owl:sameAs 17500.00 .
+
+18000.00 a xsd:decimal ;
+    owl:sameAs 18000.00 .
+
+19500.00 a xsd:decimal ;
+    owl:sameAs 19500.00 .
+
+21000.00 a xsd:decimal ;
+    owl:sameAs 21000.00 .
+
+24000.00 a xsd:decimal ;
+    owl:sameAs 24000.00 .
+
+72000.00 a xsd:decimal ;
+    owl:sameAs 72000.00 .
+
+"8991001000134"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000134"^^xsd:string .
+
+"8991001000141"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000141"^^xsd:string .
+
+"8991001000158"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000158"^^xsd:string .
+
+"8991001000172"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000172"^^xsd:string .
+
+"8991001000189"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000189"^^xsd:string .
+
+"8991001000936"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000936"^^xsd:string .
+
+"P01"^^xsd:string a xsd:string ;
+    owl:sameAs "P01"^^xsd:string .
+
+"P02"^^xsd:string a xsd:string ;
+    owl:sameAs "P02"^^xsd:string .
+
+"P03"^^xsd:string a xsd:string ;
+    owl:sameAs "P03"^^xsd:string .
+
+"P04"^^xsd:string a xsd:string ;
+    owl:sameAs "P04"^^xsd:string .
+
+"P05"^^xsd:string a xsd:string ;
+    owl:sameAs "P05"^^xsd:string .
+
+"T001"^^xsd:string a xsd:string ;
+    owl:sameAs "T001"^^xsd:string .
+
+"T002"^^xsd:string a xsd:string ;
+    owl:sameAs "T002"^^xsd:string .
+
+"T003"^^xsd:string a xsd:string ;
+    owl:sameAs "T003"^^xsd:string .
+
+"T004"^^xsd:string a xsd:string ;
+    owl:sameAs "T004"^^xsd:string .
+
+"T005"^^xsd:string a xsd:string ;
+    owl:sameAs "T005"^^xsd:string .
+
+"T006"^^xsd:string a xsd:string ;
+    owl:sameAs "T006"^^xsd:string .
+
+"T007"^^xsd:string a xsd:string ;
+    owl:sameAs "T007"^^xsd:string .
+
+"T008"^^xsd:string a xsd:string ;
+    owl:sameAs "T008"^^xsd:string .
+
+"T009"^^xsd:string a xsd:string ;
+    owl:sameAs "T009"^^xsd:string .
+
+"T010"^^xsd:string a xsd:string ;
+    owl:sameAs "T010"^^xsd:string .
+
+"T011"^^xsd:string a xsd:string ;
+    owl:sameAs "T011"^^xsd:string .
+
+"T012"^^xsd:string a xsd:string ;
+    owl:sameAs "T012"^^xsd:string .
+
+"T013"^^xsd:string a xsd:string ;
+    owl:sameAs "T013"^^xsd:string .
+
+"T014"^^xsd:string a xsd:string ;
+    owl:sameAs "T014"^^xsd:string .
+
+"T015"^^xsd:string a xsd:string ;
+    owl:sameAs "T015"^^xsd:string .
+
+"T016"^^xsd:string a xsd:string ;
+    owl:sameAs "T016"^^xsd:string .
+
+"T017"^^xsd:string a xsd:string ;
+    owl:sameAs "T017"^^xsd:string .
+
+"T018"^^xsd:string a xsd:string ;
+    owl:sameAs "T018"^^xsd:string .
+
+"T019"^^xsd:string a xsd:string ;
+    owl:sameAs "T019"^^xsd:string .
+
+"T020"^^xsd:string a xsd:string ;
+    owl:sameAs "T020"^^xsd:string .
+
+"T021"^^xsd:string a xsd:string ;
+    owl:sameAs "T021"^^xsd:string .
+
+"T022"^^xsd:string a xsd:string ;
+    owl:sameAs "T022"^^xsd:string .
+
+"T023"^^xsd:string a xsd:string ;
+    owl:sameAs "T023"^^xsd:string .
+
+"T024"^^xsd:string a xsd:string ;
+    owl:sameAs "T024"^^xsd:string .
+
+"T025"^^xsd:string a xsd:string ;
+    owl:sameAs "T025"^^xsd:string .
+
+"Barang Inventaris Gudang"@id owl:sameAs "Barang Inventaris Gudang"@id .
+
+"CV Kopi Bukit Barisan"@id owl:sameAs "CV Kopi Bukit Barisan"@id .
+
+"CV Pangan Makmur Jaya"@id owl:sameAs "CV Pangan Makmur Jaya"@id .
+
+"KARBOL PINUS LANTAI 800 ML"@id owl:sameAs "KARBOL PINUS LANTAI 800 ML"@id .
+
+"Ontologi Jembatan Semantik Toko Lentera"@id owl:sameAs "Ontologi Jembatan Semantik Toko Lentera"@id .
+
+"PT Bersih Kilau Mandiri"@id owl:sameAs "PT Bersih Kilau Mandiri"@id .
+
+"PT Tirta Segar Nusantara"@id owl:sameAs "PT Tirta Segar Nusantara"@id .
+
+"Penerimaan Barang Gudang"@id owl:sameAs "Penerimaan Barang Gudang"@id .
+
+"Produk Jual Kasir"@id owl:sameAs "Produk Jual Kasir"@id .
+
+"Roti Sobek Cokelat Lentera"@id owl:sameAs "Roti Sobek Cokelat Lentera"@id .
+
+"SUSU UHT COKELAT"@id owl:sameAs "SUSU UHT COKELAT"@id .
+
+"Susu UHT Cokelat"@id owl:sameAs "Susu UHT Cokelat"@id .
+
+"TEH HIJAU CELUP ISI 25"@id owl:sameAs "TEH HIJAU CELUP ISI 25"@id .
+
+"Tas Belanja Lipat Lentera"@id owl:sameAs "Tas Belanja Lipat Lentera"@id .
+
+"UD Camilan Nusantara"@id owl:sameAs "UD Camilan Nusantara"@id .
+
+"dipasok oleh"@id owl:sameAs "dipasok oleh"@id .
+
+"harga beli satuan"@id owl:sameAs "harga beli satuan"@id .
+
+"margin kotor per unit"@id owl:sameAs "margin kotor per unit"@id .
+
+"memasok"@id owl:sameAs "memasok"@id .
+
+"stok minimum"@id owl:sameAs "stok minimum"@id .
+
+ex:dipasokOleh a owl:ObjectProperty ;
+    rdfs:label "dipasok oleh"@id ;
+    rdfs:comment "Menghubungkan catatan penerimaan barang dengan organisasi pemasok yang mengirimkannya."@id ;
+    rdfs:domain owl:Thing,
+        ex:PenerimaanBarang ;
+    rdfs:range schema:Organization ;
+    rdfs:subPropertyOf ex:dipasokOleh ;
+    owl:equivalentProperty ex:dipasokOleh ;
+    owl:inverseOf ex:memasok ;
+    owl:sameAs ex:dipasokOleh ;
+    schema:name "dipasok oleh"@id .
+
+ex:memasok a owl:ObjectProperty ;
+    rdfs:label "memasok"@id ;
+    rdfs:comment "Properti kebalikan yang menghubungkan organisasi pemasok ke catatan penerimaan barang."@id ;
+    rdfs:domain schema:Organization ;
+    rdfs:range owl:Thing,
+        ex:PenerimaanBarang ;
+    rdfs:subPropertyOf ex:memasok ;
+    owl:equivalentProperty ex:memasok ;
+    owl:inverseOf ex:dipasokOleh ;
+    owl:sameAs ex:memasok ;
+    schema:name "memasok"@id .
+
+<https://data.lentera.example/id/pemasok/P04> a schema:Organization ;
+    rdfs:label "PT Bersih Kilau Mandiri"@id ;
+    dcterms:identifier "P04"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/pemasok/P04> ;
+    ex:memasok <https://data.lentera.example/id/penerimaan/PB18>,
+        <https://data.lentera.example/id/penerimaan/PB19>,
+        <https://data.lentera.example/id/penerimaan/PB21> ;
+    schema:addressLocality "Jakarta"@id ;
+    schema:gtin13 "P04"^^xsd:string ;
+    schema:name "PT Bersih Kilau Mandiri"@id .
+
+<https://data.lentera.example/id/transaksi/T001> a schema:Order ;
+    dcterms:creator "Rina"@id ;
+    dcterms:date "2026-03-01"^^xsd:date ;
+    dcterms:identifier "T001"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T001> ;
+    schema:gtin13 "T001"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T003> a schema:Order ;
+    dcterms:creator "Rina"@id ;
+    dcterms:date "2026-03-02"^^xsd:date ;
+    dcterms:identifier "T003"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T003> ;
+    schema:gtin13 "T003"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T004> a schema:Order ;
+    dcterms:creator "Sari"@id ;
+    dcterms:date "2026-03-02"^^xsd:date ;
+    dcterms:identifier "T004"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T004> ;
+    schema:gtin13 "T004"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T006> a schema:Order ;
+    dcterms:creator "Budi"@id ;
+    dcterms:date "2026-03-03"^^xsd:date ;
+    dcterms:identifier "T006"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T006> ;
+    schema:gtin13 "T006"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T007> a schema:Order ;
+    dcterms:creator "Rina"@id ;
+    dcterms:date "2026-03-04"^^xsd:date ;
+    dcterms:identifier "T007"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T007> ;
+    schema:gtin13 "T007"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T008> a schema:Order ;
+    dcterms:creator "Sari"@id ;
+    dcterms:date "2026-03-04"^^xsd:date ;
+    dcterms:identifier "T008"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T008> ;
+    schema:gtin13 "T008"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T009> a schema:Order ;
+    dcterms:creator "Budi"@id ;
+    dcterms:date "2026-03-05"^^xsd:date ;
+    dcterms:identifier "T009"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T009> ;
+    schema:gtin13 "T009"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T011> a schema:Order ;
+    dcterms:creator "Rina"@id ;
+    dcterms:date "2026-03-06"^^xsd:date ;
+    dcterms:identifier "T011"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T011> ;
+    schema:gtin13 "T011"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T012> a schema:Order ;
+    dcterms:creator "Sari"@id ;
+    dcterms:date "2026-03-06"^^xsd:date ;
+    dcterms:identifier "T012"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T012> ;
+    schema:gtin13 "T012"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T013> a schema:Order ;
+    dcterms:creator "Budi"@id ;
+    dcterms:date "2026-03-07"^^xsd:date ;
+    dcterms:identifier "T013"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T013> ;
+    schema:gtin13 "T013"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T014> a schema:Order ;
+    dcterms:creator "Rina"@id ;
+    dcterms:date "2026-03-07"^^xsd:date ;
+    dcterms:identifier "T014"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T014> ;
+    schema:gtin13 "T014"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T016> a schema:Order ;
+    dcterms:date "2026-03-08"^^xsd:date ;
+    dcterms:identifier "T016"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T016> ;
+    schema:gtin13 "T016"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T017> a schema:Order ;
+    dcterms:creator "Budi"@id ;
+    dcterms:date "2026-03-09"^^xsd:date ;
+    dcterms:identifier "T017"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T017> ;
+    schema:gtin13 "T017"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T018> a schema:Order ;
+    dcterms:creator "Rina"@id ;
+    dcterms:date "2026-03-10"^^xsd:date ;
+    dcterms:identifier "T018"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T018> ;
+    schema:gtin13 "T018"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T019> a schema:Order ;
+    dcterms:creator "Sari"@id ;
+    dcterms:date "2026-03-11"^^xsd:date ;
+    dcterms:identifier "T019"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T019> ;
+    schema:gtin13 "T019"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T020> a schema:Order ;
+    dcterms:creator "Budi"@id ;
+    dcterms:date "2026-03-12"^^xsd:date ;
+    dcterms:identifier "T020"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T020> ;
+    schema:gtin13 "T020"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T021> a schema:Order ;
+    dcterms:creator "Rina"@id ;
+    dcterms:date "2026-03-13"^^xsd:date ;
+    dcterms:identifier "T021"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T021> ;
+    schema:gtin13 "T021"^^xsd:string .
+
+<https://data.lentera.example/id/transaksi/T022> a schema:Order ;
+    dcterms:creator "Sari"@id ;
+    dcterms:date "2026-03-14"^^xsd:date ;
+    dcterms:identifier "T022"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/transaksi/T022> ;
+    schema:gtin13 "T022"^^xsd:string .
+
+"2026-03-01"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-01"^^xsd:date .
+
+"2026-03-02"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-02"^^xsd:date .
+
+"2026-03-03"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-03"^^xsd:date .
+
+"2026-03-04"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-04"^^xsd:date .
+
+"2026-03-05"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-05"^^xsd:date .
+
+"2026-03-06"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-06"^^xsd:date .
+
+"2026-03-07"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-07"^^xsd:date .
+
+"2026-03-08"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-08"^^xsd:date .
+
+"2026-03-12"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-12"^^xsd:date .
+
+1 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 1 .
+
+15000.00 a xsd:decimal ;
+    owl:sameAs 15000.00 .
+
+16000.00 a xsd:decimal ;
+    owl:sameAs 16000.00 .
+
+dcterms:identifier a owl:DatatypeProperty,
+        owl:InverseFunctionalProperty ;
+    rdfs:subPropertyOf dcterms:identifier,
+        schema:gtin13 ;
+    owl:equivalentProperty dcterms:identifier,
+        schema:gtin13 ;
+    owl:sameAs dcterms:identifier .
+
+<https://data.lentera.example/id/pemasok/P03> a schema:Organization ;
+    rdfs:label "UD Camilan Nusantara"@id ;
+    dcterms:identifier "P03"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/pemasok/P03> ;
+    ex:memasok <https://data.lentera.example/id/penerimaan/PB09>,
+        <https://data.lentera.example/id/penerimaan/PB10>,
+        <https://data.lentera.example/id/penerimaan/PB11>,
+        <https://data.lentera.example/id/penerimaan/PB12> ;
+    schema:addressLocality "Palembang"@id ;
+    schema:gtin13 "P03"^^xsd:string ;
+    schema:name "UD Camilan Nusantara"@id .
+
+schema:gtin13 a owl:DatatypeProperty,
+        owl:InverseFunctionalProperty ;
+    rdfs:subPropertyOf dcterms:identifier,
+        schema:gtin13 ;
+    owl:equivalentProperty dcterms:identifier,
+        schema:gtin13 ;
+    owl:sameAs schema:gtin13 .
+
+schema:name a owl:DatatypeProperty ;
+    rdfs:subPropertyOf rdfs:label,
+        schema:name ;
+    owl:equivalentProperty rdfs:label,
+        schema:name ;
+    owl:sameAs schema:name .
+
+"2026-03-14"^^xsd:date a xsd:date ;
+    owl:sameAs "2026-03-14"^^xsd:date .
+
+"8991001000011"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000011"^^xsd:string .
+
+"8991001000028"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000028"^^xsd:string .
+
+"8991001000035"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000035"^^xsd:string .
+
+"8991001000042"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000042"^^xsd:string .
+
+"8991001000059"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000059"^^xsd:string .
+
+"8991001000066"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000066"^^xsd:string .
+
+"8991001000073"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000073"^^xsd:string .
+
+"8991001000080"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000080"^^xsd:string .
+
+"8991001000097"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000097"^^xsd:string .
+
+"8991001000103"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000103"^^xsd:string .
+
+"8991001000110"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000110"^^xsd:string .
+
+"8991001000127"^^xsd:string a xsd:string ;
+    owl:sameAs "8991001000127"^^xsd:string .
+
+"AIR MINERAL LENTERA 600 ML"@id owl:sameAs "AIR MINERAL LENTERA 600 ML"@id .
+
+"Air Mineral Lentera 600ml"@id owl:sameAs "Air Mineral Lentera 600ml"@id .
+
+"BERAS RAMOS SUPER 5 KG"@id owl:sameAs "BERAS RAMOS SUPER 5 KG"@id .
+
+"BISKUIT GANDUM COKELAT 120 GR"@id owl:sameAs "BISKUIT GANDUM COKELAT 120 GR"@id .
+
+"Beras Ramos Super 5kg"@id owl:sameAs "Beras Ramos Super 5kg"@id .
+
+"Biskuit Gandum Cokelat 120g"@id owl:sameAs "Biskuit Gandum Cokelat 120g"@id .
+
+"DETERJEN BUBUK FLORAL 800 GR"@id owl:sameAs "DETERJEN BUBUK FLORAL 800 GR"@id .
+
+"Deterjen Bubuk Floral 800g"@id owl:sameAs "Deterjen Bubuk Floral 800g"@id .
+
+"GULA PASIR PUTIH 1 KG"@id owl:sameAs "GULA PASIR PUTIH 1 KG"@id .
+
+"Gula Pasir Putih 1kg"@id owl:sameAs "Gula Pasir Putih 1kg"@id .
+
+"KACANG PANGGANG BAWANG 200 GR"@id owl:sameAs "KACANG PANGGANG BAWANG 200 GR"@id .
+
+"KERIPIK SINGKONG BALADO 150 GR"@id owl:sameAs "KERIPIK SINGKONG BALADO 150 GR"@id .
+
+"KOPI BUBUK ROBUSTA 200 GR"@id owl:sameAs "KOPI BUBUK ROBUSTA 200 GR"@id .
+
+"KOPI SUSU BOTOL 250 ML"@id owl:sameAs "KOPI SUSU BOTOL 250 ML"@id .
+
+"Kacang Panggang Bawang 200g"@id owl:sameAs "Kacang Panggang Bawang 200g"@id .
+
+"Keripik Singkong Balado 150g"@id owl:sameAs "Keripik Singkong Balado 150g"@id .
+
+"Kopi Bubuk Robusta 200g"@id owl:sameAs "Kopi Bubuk Robusta 200g"@id .
+
+"Kopi Susu 250ml"@id owl:sameAs "Kopi Susu 250ml"@id .
+
+"MINYAK GORENG SAWIT POUCH 1 L"@id owl:sameAs "MINYAK GORENG SAWIT POUCH 1 L"@id .
+
+"Minyak Goreng Sawit 1L"@id owl:sameAs "Minyak Goreng Sawit 1L"@id .
+
+"SABUN CUCI PIRING JERUK 750 ML"@id owl:sameAs "SABUN CUCI PIRING JERUK 750 ML"@id .
+
+"Sabun Cuci Piring Jeruk 750ml"@id owl:sameAs "Sabun Cuci Piring Jeruk 750ml"@id .
+
+"TEH MELATI KOTAK 300 ML"@id owl:sameAs "TEH MELATI KOTAK 300 ML"@id .
+
+"Teh Melati Kotak 300ml"@id owl:sameAs "Teh Melati Kotak 300ml"@id .
+
+owl:Class owl:sameAs owl:Class .
+
+<https://data.lentera.example/id/kasira/produk/8991001000073> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "KACANG PANGGANG BAWANG 200 GR"@id,
+        "Kacang Panggang Bawang 200g"@id ;
+    dcterms:identifier "8991001000073"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000073>,
+        <https://data.lentera.example/id/stokara/barang/8991001000073> ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> ;
+    schema:gtin13 "8991001000073"^^xsd:string ;
+    schema:name "KACANG PANGGANG BAWANG 200 GR"@id,
+        "Kacang Panggang Bawang 200g"@id ;
+    schema:price 18000.00 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000103> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "GULA PASIR PUTIH 1 KG"@id,
+        "Gula Pasir Putih 1kg"@id ;
+    dcterms:identifier "8991001000103"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000103>,
+        <https://data.lentera.example/id/stokara/barang/8991001000103> ;
+    ex:stokMinimum 25 ;
+    schema:category <https://data.lentera.example/id/kategori/bahan-pokok> ;
+    schema:gtin13 "8991001000103"^^xsd:string ;
+    schema:name "GULA PASIR PUTIH 1 KG"@id,
+        "Gula Pasir Putih 1kg"@id ;
+    schema:price 17500.00 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000110> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "SABUN CUCI PIRING JERUK 750 ML"@id,
+        "Sabun Cuci Piring Jeruk 750ml"@id ;
+    dcterms:identifier "8991001000110"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000110>,
+        <https://data.lentera.example/id/stokara/barang/8991001000110> ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/pembersih> ;
+    schema:gtin13 "8991001000110"^^xsd:string ;
+    schema:name "SABUN CUCI PIRING JERUK 750 ML"@id,
+        "Sabun Cuci Piring Jeruk 750ml"@id ;
+    schema:price 16000.00 .
+
+<https://data.lentera.example/id/kategori/pembersih> owl:sameAs <https://data.lentera.example/id/kategori/pembersih> .
+
+<https://data.lentera.example/id/pemasok/P01> a schema:Organization ;
+    rdfs:label "PT Tirta Segar Nusantara"@id ;
+    dcterms:identifier "P01"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/pemasok/P01> ;
+    ex:memasok <https://data.lentera.example/id/penerimaan/PB03>,
+        <https://data.lentera.example/id/penerimaan/PB04>,
+        <https://data.lentera.example/id/penerimaan/PB05>,
+        <https://data.lentera.example/id/penerimaan/PB06>,
+        <https://data.lentera.example/id/penerimaan/PB20> ;
+    schema:addressLocality "Bandar Lampung"@id ;
+    schema:gtin13 "P01"^^xsd:string ;
+    schema:name "PT Tirta Segar Nusantara"@id .
+
+<https://data.lentera.example/id/pemasok/P02> a schema:Organization ;
+    rdfs:label "CV Pangan Makmur Jaya"@id ;
+    dcterms:identifier "P02"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/pemasok/P02> ;
+    ex:memasok <https://data.lentera.example/id/penerimaan/PB13>,
+        <https://data.lentera.example/id/penerimaan/PB14>,
+        <https://data.lentera.example/id/penerimaan/PB15>,
+        <https://data.lentera.example/id/penerimaan/PB16>,
+        <https://data.lentera.example/id/penerimaan/PB17> ;
+    schema:addressLocality "Metro"@id ;
+    schema:gtin13 "P02"^^xsd:string ;
+    schema:name "CV Pangan Makmur Jaya"@id .
+
+<https://data.lentera.example/id/pemasok/P05> a schema:Organization ;
+    rdfs:label "CV Kopi Bukit Barisan"@id ;
+    dcterms:identifier "P05"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/pemasok/P05> ;
+    ex:memasok <https://data.lentera.example/id/penerimaan/PB01>,
+        <https://data.lentera.example/id/penerimaan/PB02>,
+        <https://data.lentera.example/id/penerimaan/PB07>,
+        <https://data.lentera.example/id/penerimaan/PB08>,
+        <https://data.lentera.example/id/penerimaan/PB22> ;
+    schema:gtin13 "P05"^^xsd:string ;
+    schema:name "CV Kopi Bukit Barisan"@id .
+
+<https://data.lentera.example/id/stokara/barang/8991001000073> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "KACANG PANGGANG BAWANG 200 GR"@id,
+        "Kacang Panggang Bawang 200g"@id ;
+    dcterms:identifier "8991001000073"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000073>,
+        <https://data.lentera.example/id/stokara/barang/8991001000073> ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> ;
+    schema:gtin13 "8991001000073"^^xsd:string ;
+    schema:name "KACANG PANGGANG BAWANG 200 GR"@id,
+        "Kacang Panggang Bawang 200g"@id ;
+    schema:price 18000.00 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000103> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "GULA PASIR PUTIH 1 KG"@id,
+        "Gula Pasir Putih 1kg"@id ;
+    dcterms:identifier "8991001000103"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000103>,
+        <https://data.lentera.example/id/stokara/barang/8991001000103> ;
+    ex:stokMinimum 25 ;
+    schema:category <https://data.lentera.example/id/kategori/bahan-pokok> ;
+    schema:gtin13 "8991001000103"^^xsd:string ;
+    schema:name "GULA PASIR PUTIH 1 KG"@id,
+        "Gula Pasir Putih 1kg"@id ;
+    schema:price 17500.00 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000110> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "SABUN CUCI PIRING JERUK 750 ML"@id,
+        "Sabun Cuci Piring Jeruk 750ml"@id ;
+    dcterms:identifier "8991001000110"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000110>,
+        <https://data.lentera.example/id/stokara/barang/8991001000110> ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/pembersih> ;
+    schema:gtin13 "8991001000110"^^xsd:string ;
+    schema:name "SABUN CUCI PIRING JERUK 750 ML"@id,
+        "Sabun Cuci Piring Jeruk 750ml"@id ;
+    schema:price 16000.00 .
+
+40 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 40 .
+
+owl:DatatypeProperty owl:sameAs owl:DatatypeProperty .
+
+<https://data.lentera.example/id/kasira/produk/8991001000066> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "BISKUIT GANDUM COKELAT 120 GR"@id,
+        "Biskuit Gandum Cokelat 120g"@id ;
+    dcterms:identifier "8991001000066"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000066>,
+        <https://data.lentera.example/id/stokara/barang/8991001000066> ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> ;
+    schema:gtin13 "8991001000066"^^xsd:string ;
+    schema:name "BISKUIT GANDUM COKELAT 120 GR"@id,
+        "Biskuit Gandum Cokelat 120g"@id ;
+    schema:price 10000.00 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000127> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "DETERJEN BUBUK FLORAL 800 GR"@id,
+        "Deterjen Bubuk Floral 800g"@id ;
+    dcterms:identifier "8991001000127"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000127>,
+        <https://data.lentera.example/id/stokara/barang/8991001000127> ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/pembersih> ;
+    schema:gtin13 "8991001000127"^^xsd:string ;
+    schema:name "DETERJEN BUBUK FLORAL 800 GR"@id,
+        "Deterjen Bubuk Floral 800g"@id ;
+    schema:price 21000.00 .
+
+<https://data.lentera.example/id/kategori/bahan-pokok> owl:sameAs <https://data.lentera.example/id/kategori/bahan-pokok> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000066> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "BISKUIT GANDUM COKELAT 120 GR"@id,
+        "Biskuit Gandum Cokelat 120g"@id ;
+    dcterms:identifier "8991001000066"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000066>,
+        <https://data.lentera.example/id/stokara/barang/8991001000066> ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> ;
+    schema:gtin13 "8991001000066"^^xsd:string ;
+    schema:name "BISKUIT GANDUM COKELAT 120 GR"@id,
+        "Biskuit Gandum Cokelat 120g"@id ;
+    schema:price 10000.00 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000127> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "DETERJEN BUBUK FLORAL 800 GR"@id,
+        "Deterjen Bubuk Floral 800g"@id ;
+    dcterms:identifier "8991001000127"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000127>,
+        <https://data.lentera.example/id/stokara/barang/8991001000127> ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/pembersih> ;
+    schema:gtin13 "8991001000127"^^xsd:string ;
+    schema:name "DETERJEN BUBUK FLORAL 800 GR"@id,
+        "Deterjen Bubuk Floral 800g"@id ;
+    schema:price 21000.00 .
+
+30 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 30 .
+
+<https://data.lentera.example/id/kategori/makanan-ringan> owl:sameAs <https://data.lentera.example/id/kategori/makanan-ringan> .
+
+schema:Organization owl:sameAs schema:Organization .
+
+4 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 4 .
+
+15 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 15 .
+
+"Budi"@id owl:sameAs "Budi"@id .
+
+"Sari"@id owl:sameAs "Sari"@id .
+
+<https://data.lentera.example/id/kasira/produk/8991001000028> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "TEH MELATI KOTAK 300 ML"@id,
+        "Teh Melati Kotak 300ml"@id ;
+    dcterms:identifier "8991001000028"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000028>,
+        <https://data.lentera.example/id/stokara/barang/8991001000028> ;
+    ex:stokMinimum 40 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> ;
+    schema:gtin13 "8991001000028"^^xsd:string ;
+    schema:name "TEH MELATI KOTAK 300 ML"@id,
+        "Teh Melati Kotak 300ml"@id ;
+    schema:price 6500.00 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000035> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "AIR MINERAL LENTERA 600 ML"@id,
+        "Air Mineral Lentera 600ml"@id ;
+    dcterms:identifier "8991001000035"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000035>,
+        <https://data.lentera.example/id/stokara/barang/8991001000035> ;
+    ex:stokMinimum 50 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> ;
+    schema:gtin13 "8991001000035"^^xsd:string ;
+    schema:name "AIR MINERAL LENTERA 600 ML"@id,
+        "Air Mineral Lentera 600ml"@id ;
+    schema:price 4000.00 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000042> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "KOPI BUBUK ROBUSTA 200 GR"@id,
+        "Kopi Bubuk Robusta 200g"@id ;
+    dcterms:identifier "8991001000042"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000042>,
+        <https://data.lentera.example/id/stokara/barang/8991001000042> ;
+    ex:stokMinimum 25 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-seduh> ;
+    schema:gtin13 "8991001000042"^^xsd:string ;
+    schema:name "KOPI BUBUK ROBUSTA 200 GR"@id,
+        "Kopi Bubuk Robusta 200g"@id ;
+    schema:price 24000.00 .
+
+<https://data.lentera.example/id/kategori/minuman-dingin> owl:sameAs <https://data.lentera.example/id/kategori/minuman-dingin> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000028> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "TEH MELATI KOTAK 300 ML"@id,
+        "Teh Melati Kotak 300ml"@id ;
+    dcterms:identifier "8991001000028"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000028>,
+        <https://data.lentera.example/id/stokara/barang/8991001000028> ;
+    ex:stokMinimum 40 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> ;
+    schema:gtin13 "8991001000028"^^xsd:string ;
+    schema:name "TEH MELATI KOTAK 300 ML"@id,
+        "Teh Melati Kotak 300ml"@id ;
+    schema:price 6500.00 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000035> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "AIR MINERAL LENTERA 600 ML"@id,
+        "Air Mineral Lentera 600ml"@id ;
+    dcterms:identifier "8991001000035"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000035>,
+        <https://data.lentera.example/id/stokara/barang/8991001000035> ;
+    ex:stokMinimum 50 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> ;
+    schema:gtin13 "8991001000035"^^xsd:string ;
+    schema:name "AIR MINERAL LENTERA 600 ML"@id,
+        "Air Mineral Lentera 600ml"@id ;
+    schema:price 4000.00 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000042> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "KOPI BUBUK ROBUSTA 200 GR"@id,
+        "Kopi Bubuk Robusta 200g"@id ;
+    dcterms:identifier "8991001000042"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000042>,
+        <https://data.lentera.example/id/stokara/barang/8991001000042> ;
+    ex:stokMinimum 25 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-seduh> ;
+    schema:gtin13 "8991001000042"^^xsd:string ;
+    schema:name "KOPI BUBUK ROBUSTA 200 GR"@id,
+        "Kopi Bubuk Robusta 200g"@id ;
+    schema:price 24000.00 .
+
+"Rina"@id owl:sameAs "Rina"@id .
+
+owl:AnnotationProperty owl:sameAs owl:AnnotationProperty .
+
+<https://data.lentera.example/id/kasira/produk/8991001000059> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "KERIPIK SINGKONG BALADO 150 GR"@id,
+        "Keripik Singkong Balado 150g"@id ;
+    dcterms:identifier "8991001000059"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> ;
+    ex:stokMinimum 25 ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> ;
+    schema:gtin13 "8991001000059"^^xsd:string ;
+    schema:name "KERIPIK SINGKONG BALADO 150 GR"@id,
+        "Keripik Singkong Balado 150g"@id ;
+    schema:price 12500.00 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000097> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "MINYAK GORENG SAWIT POUCH 1 L"@id,
+        "Minyak Goreng Sawit 1L"@id ;
+    dcterms:identifier "8991001000097"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> ;
+    ex:stokMinimum 30 ;
+    schema:category <https://data.lentera.example/id/kategori/bahan-pokok> ;
+    schema:gtin13 "8991001000097"^^xsd:string ;
+    schema:name "MINYAK GORENG SAWIT POUCH 1 L"@id,
+        "Minyak Goreng Sawit 1L"@id ;
+    schema:price 19500.00 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000059> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "KERIPIK SINGKONG BALADO 150 GR"@id,
+        "Keripik Singkong Balado 150g"@id ;
+    dcterms:identifier "8991001000059"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000059>,
+        <https://data.lentera.example/id/stokara/barang/8991001000059> ;
+    ex:stokMinimum 25 ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> ;
+    schema:gtin13 "8991001000059"^^xsd:string ;
+    schema:name "KERIPIK SINGKONG BALADO 150 GR"@id,
+        "Keripik Singkong Balado 150g"@id ;
+    schema:price 12500.00 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000097> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "MINYAK GORENG SAWIT POUCH 1 L"@id,
+        "Minyak Goreng Sawit 1L"@id ;
+    dcterms:identifier "8991001000097"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000097>,
+        <https://data.lentera.example/id/stokara/barang/8991001000097> ;
+    ex:stokMinimum 30 ;
+    schema:category <https://data.lentera.example/id/kategori/bahan-pokok> ;
+    schema:gtin13 "8991001000097"^^xsd:string ;
+    schema:name "MINYAK GORENG SAWIT POUCH 1 L"@id,
+        "Minyak Goreng Sawit 1L"@id ;
+    schema:price 19500.00 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000080> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "BERAS RAMOS SUPER 5 KG"@id,
+        "Beras Ramos Super 5kg"@id ;
+    dcterms:identifier "8991001000080"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> ;
+    ex:stokMinimum 15 ;
+    schema:category <https://data.lentera.example/id/kategori/bahan-pokok> ;
+    schema:gtin13 "8991001000080"^^xsd:string ;
+    schema:name "BERAS RAMOS SUPER 5 KG"@id,
+        "Beras Ramos Super 5kg"@id ;
+    schema:price 72000.00 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000080> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "BERAS RAMOS SUPER 5 KG"@id,
+        "Beras Ramos Super 5kg"@id ;
+    dcterms:identifier "8991001000080"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000080>,
+        <https://data.lentera.example/id/stokara/barang/8991001000080> ;
+    ex:stokMinimum 15 ;
+    schema:category <https://data.lentera.example/id/kategori/bahan-pokok> ;
+    schema:gtin13 "8991001000080"^^xsd:string ;
+    schema:name "BERAS RAMOS SUPER 5 KG"@id,
+        "Beras Ramos Super 5kg"@id ;
+    schema:price 72000.00 .
+
+25 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 25 .
+
+<https://data.lentera.example/id/kasira/produk/8991001000011> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "KOPI SUSU BOTOL 250 ML"@id,
+        "Kopi Susu 250ml"@id ;
+    dcterms:identifier "8991001000011"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> ;
+    ex:stokMinimum 30 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> ;
+    schema:gtin13 "8991001000011"^^xsd:string ;
+    schema:name "KOPI SUSU BOTOL 250 ML"@id,
+        "Kopi Susu 250ml"@id ;
+    schema:price 15000.00 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000011> a owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    rdfs:label "KOPI SUSU BOTOL 250 ML"@id,
+        "Kopi Susu 250ml"@id ;
+    dcterms:identifier "8991001000011"^^xsd:string ;
+    owl:sameAs <https://data.lentera.example/id/kasira/produk/8991001000011>,
+        <https://data.lentera.example/id/stokara/barang/8991001000011> ;
+    ex:stokMinimum 30 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> ;
+    schema:gtin13 "8991001000011"^^xsd:string ;
+    schema:name "KOPI SUSU BOTOL 250 ML"@id,
+        "Kopi Susu 250ml"@id ;
+    schema:price 15000.00 .
+
+xsd:integer a rdfs:Datatype ;
+    owl:sameAs xsd:integer .
+
+20 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 20 .
+
+xsd:date a rdfs:Datatype ;
+    owl:sameAs xsd:date .
+
+3 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 3 .
+
+schema:Order owl:sameAs schema:Order .
+
+ex:PenerimaanBarang a owl:Class ;
+    rdfs:label "Penerimaan Barang Gudang"@id ;
+    rdfs:comment "Kejadian pencatatan barang masuk dari pemasok ke gudang beserta kuantitas dan harga beli."@id ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing ;
+    rdfs:subClassOf owl:Thing,
+        ex:PenerimaanBarang ;
+    owl:equivalentClass ex:PenerimaanBarang ;
+    owl:sameAs ex:PenerimaanBarang ;
+    schema:name "Penerimaan Barang Gudang"@id .
+
+2 a xsd:decimal,
+        xsd:integer ;
+    owl:sameAs 2 .
+
+ex:Barang a owl:Class ;
+    rdfs:label "Barang Inventaris Gudang"@id ;
+    rdfs:comment "Representasi barang fisik yang tercatat pada sistem inventaris Stokara."@id ;
+    rdfs:domain schema:Product ;
+    rdfs:range schema:Product ;
+    rdfs:subClassOf owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    owl:equivalentClass ex:Barang,
+        ex:ProdukJual ;
+    owl:sameAs ex:Barang ;
+    schema:name "Barang Inventaris Gudang"@id .
+
+ex:ProdukJual a owl:Class ;
+    rdfs:label "Produk Jual Kasir"@id ;
+    rdfs:comment "Representasi produk dagangan yang tercatat pada sistem kasir Kasira."@id ;
+    rdfs:domain schema:Product ;
+    rdfs:range schema:Product ;
+    rdfs:subClassOf owl:Thing,
+        ex:Barang,
+        ex:ProdukJual,
+        schema:Product ;
+    owl:equivalentClass ex:Barang,
+        ex:ProdukJual ;
+    owl:sameAs ex:ProdukJual ;
+    schema:name "Produk Jual Kasir"@id .
+
+rdfs:Datatype owl:sameAs rdfs:Datatype .
+
+schema:Product owl:sameAs schema:Product .
+
+xsd:string a rdfs:Datatype ;
+    owl:sameAs xsd:string .
+
+xsd:decimal a rdfs:Datatype ;
+    owl:disjointWith xsd:string ;
+    owl:sameAs xsd:decimal .
+
+owl:Thing a owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    owl:equivalentClass owl:Thing ;
+    owl:sameAs owl:Thing .
+
+schema:OrderItem owl:sameAs schema:OrderItem .
+

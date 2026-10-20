@@ -1,0 +1,33 @@
+# Kueri 3: CONSTRUCT Graf Baru ex:marginPerUnit
+# Tujuan: Membentuk graf RDF baru yang menyematkan properti margin per unit ke setiap produk.
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ex: <https://data.lentera.example/def#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+    ?produk ex:marginPerUnit ?margin .
+}
+WHERE {
+    ?produk a ex:ProdukJual ;
+            schema:price ?hargaJual .
+    FILTER(STRSTARTS(STR(?produk), "https://data.lentera.example/id/kasira/produk/"))
+
+    {
+        SELECT ?produk (MAX(?tgl) AS ?tglTerakhir)
+        WHERE {
+            ?pb a ex:PenerimaanBarang ;
+                schema:orderedItem ?produk ;
+                dcterms:date ?tgl .
+        }
+        GROUP BY ?produk
+    }
+
+    ?pbAkhir a ex:PenerimaanBarang ;
+             schema:orderedItem ?produk ;
+             dcterms:date ?tglTerakhir ;
+             ex:hargaBeli ?hargaBeliAkhir .
+
+    BIND(xsd:decimal(?hargaJual - ?hargaBeliAkhir) AS ?margin)
+}

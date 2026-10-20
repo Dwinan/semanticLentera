@@ -1,0 +1,41 @@
+# Kueri 1: Agregasi GROUP BY + HAVING Lintas-Sumber
+# Tujuan: Menemukan produk yang stok perkiraannya (total penerimaan di Stokara dikurangi
+#         total terjual di Kasira) sudah berada di bawah ambang stok minimum.
+# Hasil yang diharapkan: 7 produk kritis yang wajib segera dipesan ulang.
+
+PREFIX ex: <https://data.lentera.example/def#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?barcode ?namaKasir (xsd:integer(?totalTerima) AS ?masuk) (xsd:integer(?totalJual) AS ?keluar)
+       (xsd:integer(?totalTerima - ?totalJual) AS ?stokPerkiraan) ?stokMin
+WHERE {
+    ?produk a ex:ProdukJual ;
+            schema:gtin13 ?barcode ;
+            schema:name ?namaKasir ;
+            ex:stokMinimum ?stokMin .
+    FILTER(STRSTARTS(STR(?produk), "https://data.lentera.example/id/kasira/produk/"))
+
+    {
+        SELECT ?produk (SUM(?jmlTerima) AS ?totalTerima)
+        WHERE {
+            ?pb a ex:PenerimaanBarang ;
+                schema:orderedItem ?produk ;
+                rdf:value ?jmlTerima .
+        }
+        GROUP BY ?produk
+    }
+    {
+        SELECT ?produk (SUM(?qtyJual) AS ?totalJual)
+        WHERE {
+            ?item a schema:OrderItem ;
+                  schema:orderedItem ?produk ;
+                  schema:orderQuantity ?qtyJual .
+        }
+        GROUP BY ?produk
+    }
+}
+GROUP BY ?barcode ?namaKasir ?totalTerima ?totalJual ?stokMin
+HAVING ((?totalTerima - ?totalJual) < ?stokMin)
+ORDER BY (?totalTerima - ?totalJual - ?stokMin)

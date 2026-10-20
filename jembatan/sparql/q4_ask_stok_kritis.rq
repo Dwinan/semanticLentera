@@ -1,0 +1,31 @@
+# Kueri 4: ASK Pemeriksa Boolean Penjaga Aplikasi
+# Tujuan: Memeriksa apakah produk tertentu (Kopi Susu 250ml: 8991001000011) stoknya di bawah minimum.
+# Hasil yang diharapkan: true (karena sisa 18 < stok minimum 30).
+
+PREFIX ex: <https://data.lentera.example/def#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+
+ASK WHERE {
+    BIND(<https://data.lentera.example/id/kasira/produk/8991001000011> AS ?produk)
+    ?produk ex:stokMinimum ?stokMin .
+    {
+        SELECT ?produk (SUM(?jml) AS ?masuk)
+        WHERE {
+            ?pb a ex:PenerimaanBarang ;
+                schema:orderedItem ?produk ;
+                rdf:value ?jml .
+        }
+        GROUP BY ?produk
+    }
+    {
+        SELECT ?produk (SUM(?qty) AS ?keluar)
+        WHERE {
+            ?item a schema:OrderItem ;
+                  schema:orderedItem ?produk ;
+                  schema:orderQuantity ?qty .
+        }
+        GROUP BY ?produk
+    }
+    FILTER((?masuk - ?keluar) < ?stokMin)
+}

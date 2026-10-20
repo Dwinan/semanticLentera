@@ -1,0 +1,274 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://data.lentera.example/def#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.lentera.example/id/penerimaan/PB01> a ex:PenerimaanBarang ;
+    dcterms:date "2026-02-25"^^xsd:date ;
+    rdf:value 20 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 10200.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/penerimaan/PB02> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-10"^^xsd:date ;
+    rdf:value 20 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 10500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000011> .
+
+<https://data.lentera.example/id/penerimaan/PB03> a ex:PenerimaanBarang ;
+    dcterms:date "2026-02-26"^^xsd:date ;
+    rdf:value 25 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 4300.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/penerimaan/PB04> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-11"^^xsd:date ;
+    rdf:value 25 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 4500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000028> .
+
+<https://data.lentera.example/id/penerimaan/PB05> a ex:PenerimaanBarang ;
+    dcterms:date "2026-02-27"^^xsd:date ;
+    rdf:value 40 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 2400.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/penerimaan/PB06> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-12"^^xsd:date ;
+    rdf:value 40 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 2500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000035> .
+
+<https://data.lentera.example/id/penerimaan/PB07> a ex:PenerimaanBarang ;
+    dcterms:date "2026-02-28"^^xsd:date ;
+    rdf:value 15 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 16500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/penerimaan/PB08> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-12"^^xsd:date ;
+    rdf:value 15 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 17000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000042> .
+
+<https://data.lentera.example/id/penerimaan/PB09> a ex:PenerimaanBarang ;
+    dcterms:date "2026-02-28"^^xsd:date ;
+    rdf:value 20 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P03> ;
+    ex:hargaBeli 8200.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/penerimaan/PB10> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-13"^^xsd:date ;
+    rdf:value 15 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P03> ;
+    ex:hargaBeli 8500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000059> .
+
+<https://data.lentera.example/id/penerimaan/PB11> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-01"^^xsd:date ;
+    rdf:value 35 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P03> ;
+    ex:hargaBeli 7000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000066> .
+
+<https://data.lentera.example/id/penerimaan/PB12> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-02"^^xsd:date ;
+    rdf:value 30 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P03> ;
+    ex:hargaBeli 13000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000073> .
+
+<https://data.lentera.example/id/penerimaan/PB13> a ex:PenerimaanBarang ;
+    dcterms:date "2026-02-25"^^xsd:date ;
+    rdf:value 12 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 60000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/penerimaan/PB14> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-14"^^xsd:date ;
+    rdf:value 10 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 61000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000080> .
+
+<https://data.lentera.example/id/penerimaan/PB15> a ex:PenerimaanBarang ;
+    dcterms:date "2026-02-26"^^xsd:date ;
+    rdf:value 20 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 15800.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/penerimaan/PB16> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-14"^^xsd:date ;
+    rdf:value 20 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 16000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000097> .
+
+<https://data.lentera.example/id/penerimaan/PB17> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-03"^^xsd:date ;
+    rdf:value 40 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P02> ;
+    ex:hargaBeli 14500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000103> .
+
+<https://data.lentera.example/id/penerimaan/PB18> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-04"^^xsd:date ;
+    rdf:value 30 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P04> ;
+    ex:hargaBeli 11500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000110> .
+
+<https://data.lentera.example/id/penerimaan/PB19> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-05"^^xsd:date ;
+    rdf:value 25 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P04> ;
+    ex:hargaBeli 15500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000127> .
+
+<https://data.lentera.example/id/penerimaan/PB20> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-06"^^xsd:date ;
+    rdf:value 20 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P01> ;
+    ex:hargaBeli 15000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000936> .
+
+<https://data.lentera.example/id/penerimaan/PB21> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-07"^^xsd:date ;
+    rdf:value 20 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P04> ;
+    ex:hargaBeli 12000.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000172> .
+
+<https://data.lentera.example/id/penerimaan/PB22> a ex:PenerimaanBarang ;
+    dcterms:date "2026-03-08"^^xsd:date ;
+    rdf:value 25 ;
+    ex:dipasokOleh <https://data.lentera.example/id/pemasok/P05> ;
+    ex:hargaBeli 9500.00 ;
+    schema:orderedItem <https://data.lentera.example/id/stokara/barang/8991001000189> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000066> a ex:Barang ;
+    rdfs:label "BISKUIT GANDUM COKELAT 120 GR"@id ;
+    dcterms:identifier "8991001000066"^^xsd:string ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000073> a ex:Barang ;
+    rdfs:label "KACANG PANGGANG BAWANG 200 GR"@id ;
+    dcterms:identifier "8991001000073"^^xsd:string ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000103> a ex:Barang ;
+    rdfs:label "GULA PASIR PUTIH 1 KG"@id ;
+    dcterms:identifier "8991001000103"^^xsd:string ;
+    ex:stokMinimum 25 ;
+    schema:category <https://data.lentera.example/id/kategori/bahan-pokok> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000110> a ex:Barang ;
+    rdfs:label "SABUN CUCI PIRING JERUK 750 ML"@id ;
+    dcterms:identifier "8991001000110"^^xsd:string ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/pembersih> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000127> a ex:Barang ;
+    rdfs:label "DETERJEN BUBUK FLORAL 800 GR"@id ;
+    dcterms:identifier "8991001000127"^^xsd:string ;
+    ex:stokMinimum 20 ;
+    schema:category <https://data.lentera.example/id/kategori/pembersih> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000172> a ex:Barang ;
+    rdfs:label "KARBOL PINUS LANTAI 800 ML"@id ;
+    dcterms:identifier "8991001000172"^^xsd:string ;
+    ex:stokMinimum 15 ;
+    schema:category <https://data.lentera.example/id/kategori/pembersih> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000189> a ex:Barang ;
+    rdfs:label "TEH HIJAU CELUP ISI 25"@id ;
+    dcterms:identifier "8991001000189"^^xsd:string ;
+    ex:stokMinimum 20 .
+
+<https://data.lentera.example/id/stokara/barang/8991001000936> a ex:Barang ;
+    rdfs:label "SUSU UHT COKELAT"@id ;
+    dcterms:identifier "8991001000936"^^xsd:string ;
+    ex:stokMinimum 15 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000011> a ex:Barang ;
+    rdfs:label "KOPI SUSU BOTOL 250 ML"@id ;
+    dcterms:identifier "8991001000011"^^xsd:string ;
+    ex:stokMinimum 30 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000028> a ex:Barang ;
+    rdfs:label "TEH MELATI KOTAK 300 ML"@id ;
+    dcterms:identifier "8991001000028"^^xsd:string ;
+    ex:stokMinimum 40 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000035> a ex:Barang ;
+    rdfs:label "AIR MINERAL LENTERA 600 ML"@id ;
+    dcterms:identifier "8991001000035"^^xsd:string ;
+    ex:stokMinimum 50 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-dingin> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000042> a ex:Barang ;
+    rdfs:label "KOPI BUBUK ROBUSTA 200 GR"@id ;
+    dcterms:identifier "8991001000042"^^xsd:string ;
+    ex:stokMinimum 25 ;
+    schema:category <https://data.lentera.example/id/kategori/minuman-seduh> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000059> a ex:Barang ;
+    rdfs:label "KERIPIK SINGKONG BALADO 150 GR"@id ;
+    dcterms:identifier "8991001000059"^^xsd:string ;
+    ex:stokMinimum 25 ;
+    schema:category <https://data.lentera.example/id/kategori/makanan-ringan> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000080> a ex:Barang ;
+    rdfs:label "BERAS RAMOS SUPER 5 KG"@id ;
+    dcterms:identifier "8991001000080"^^xsd:string ;
+    ex:stokMinimum 15 ;
+    schema:category <https://data.lentera.example/id/kategori/bahan-pokok> .
+
+<https://data.lentera.example/id/stokara/barang/8991001000097> a ex:Barang ;
+    rdfs:label "MINYAK GORENG SAWIT POUCH 1 L"@id ;
+    dcterms:identifier "8991001000097"^^xsd:string ;
+    ex:stokMinimum 30 ;
+    schema:category <https://data.lentera.example/id/kategori/bahan-pokok> .
+
+<https://data.lentera.example/id/pemasok/P04> a schema:Organization ;
+    dcterms:identifier "P04"^^xsd:string ;
+    schema:addressLocality "Jakarta"@id ;
+    schema:name "PT Bersih Kilau Mandiri"@id .
+
+<https://data.lentera.example/id/pemasok/P03> a schema:Organization ;
+    dcterms:identifier "P03"^^xsd:string ;
+    schema:addressLocality "Palembang"@id ;
+    schema:name "UD Camilan Nusantara"@id .
+
+<https://data.lentera.example/id/pemasok/P01> a schema:Organization ;
+    dcterms:identifier "P01"^^xsd:string ;
+    schema:addressLocality "Bandar Lampung"@id ;
+    schema:name "PT Tirta Segar Nusantara"@id .
+
+<https://data.lentera.example/id/pemasok/P02> a schema:Organization ;
+    dcterms:identifier "P02"^^xsd:string ;
+    schema:addressLocality "Metro"@id ;
+    schema:name "CV Pangan Makmur Jaya"@id .
+
+<https://data.lentera.example/id/pemasok/P05> a schema:Organization ;
+    dcterms:identifier "P05"^^xsd:string ;
+    schema:name "CV Kopi Bukit Barisan"@id .
+

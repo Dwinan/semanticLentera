@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://data.lentera.example/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.lentera.example/def> a owl:Ontology ;
+    rdfs:label "Ontologi Jembatan Semantik Toko Lentera"@id ;
+    rdfs:comment "Ontologi penghubung sistem kasir Kasira dan sistem inventaris Stokara."@id .
+
+# ============================================================================
+# 1. TIGA KELAS BUATAN (ex:ProdukJual, ex:Barang, ex:PenerimaanBarang)
+# ============================================================================
+
+ex:ProdukJual a owl:Class ;
+    rdfs:label "Produk Jual Kasir"@id ;
+    rdfs:comment "Representasi produk dagangan yang tercatat pada sistem kasir Kasira."@id ;
+    rdfs:domain schema:Product ;
+    rdfs:range schema:Product ;
+    rdfs:subClassOf schema:Product ;
+    owl:equivalentClass ex:Barang .
+
+ex:Barang a owl:Class ;
+    rdfs:label "Barang Inventaris Gudang"@id ;
+    rdfs:comment "Representasi barang fisik yang tercatat pada sistem inventaris Stokara."@id ;
+    rdfs:domain schema:Product ;
+    rdfs:range schema:Product ;
+    rdfs:subClassOf schema:Product ;
+    owl:equivalentClass ex:ProdukJual .
+
+ex:PenerimaanBarang a owl:Class ;
+    rdfs:label "Penerimaan Barang Gudang"@id ;
+    rdfs:comment "Kejadian pencatatan barang masuk dari pemasok ke gudang beserta kuantitas dan harga beli."@id ;
+    rdfs:domain owl:Thing ;
+    rdfs:range owl:Thing ;
+    rdfs:subClassOf owl:Thing .
+
+# ============================================================================
+# 2. LIMA PROPERTI BUATAN (ex:stokMinimum, ex:hargaBeli, ex:dipasokOleh, ex:memasok, ex:marginPerUnit)
+# ============================================================================
+
+ex:stokMinimum a owl:DatatypeProperty ;
+    rdfs:label "stok minimum"@id ;
+    rdfs:comment "Ambang batas jumlah stok terendah di gudang sebelum barang wajib dipesan ulang."@id ;
+    rdfs:domain schema:Product ;
+    rdfs:range xsd:integer .
+
+ex:hargaBeli a owl:DatatypeProperty ;
+    rdfs:label "harga beli satuan"@id ;
+    rdfs:comment "Harga pokok pembelian per unit barang pada saat penerimaan stok dari pemasok."@id ;
+    rdfs:domain ex:PenerimaanBarang ;
+    rdfs:range xsd:decimal .
+
+ex:dipasokOleh a owl:ObjectProperty ;
+    rdfs:label "dipasok oleh"@id ;
+    rdfs:comment "Menghubungkan catatan penerimaan barang dengan organisasi pemasok yang mengirimkannya."@id ;
+    rdfs:domain ex:PenerimaanBarang ;
+    rdfs:range schema:Organization ;
+    owl:inverseOf ex:memasok .
+
+ex:memasok a owl:ObjectProperty ;
+    rdfs:label "memasok"@id ;
+    rdfs:comment "Properti kebalikan yang menghubungkan organisasi pemasok ke catatan penerimaan barang."@id ;
+    rdfs:domain schema:Organization ;
+    rdfs:range ex:PenerimaanBarang ;
+    owl:inverseOf ex:dipasokOleh .
+
+ex:marginPerUnit a owl:DatatypeProperty ;
+    rdfs:label "margin kotor per unit"@id ;
+    rdfs:comment "Selisih antara harga jual ritel di Kasira dan harga beli terakhir di Stokara."@id ;
+    rdfs:domain schema:Product ;
+    rdfs:range xsd:decimal .
+
+# ============================================================================
+# 3. AKSIOMA PENYELARASAN PROPERTI LINTAS-SUMBER
+# ============================================================================
+
+schema:gtin13 a owl:DatatypeProperty, owl:InverseFunctionalProperty ;
+    owl:equivalentProperty dcterms:identifier .
+
+dcterms:identifier a owl:DatatypeProperty, owl:InverseFunctionalProperty .
+
+schema:name a owl:DatatypeProperty ;
+    owl:equivalentProperty rdfs:label .

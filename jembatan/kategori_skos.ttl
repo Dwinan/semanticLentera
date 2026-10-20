@@ -1,0 +1,61 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+<https://data.lentera.example/id/kategori/skema-utama> a skos:ConceptScheme ;
+    skos:prefLabel "Skema Kategori Produk Toko Lentera"@id ,
+                   "Lentera Store Product Category Scheme"@en ;
+    skos:hasTopConcept <https://data.lentera.example/id/kategori/minuman> ,
+                       <https://data.lentera.example/id/kategori/makanan> ,
+                       <https://data.lentera.example/id/kategori/kebutuhan-rumah> .
+
+# --- Tingkat 1 (Kategori Induk) ---
+
+<https://data.lentera.example/id/kategori/minuman> a skos:Concept ;
+    skos:inScheme <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:topConceptOf <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:prefLabel "Minuman"@id ;
+    skos:exactMatch wd:Q40050 .
+
+<https://data.lentera.example/id/kategori/makanan> a skos:Concept ;
+    skos:inScheme <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:topConceptOf <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:prefLabel "Makanan"@id ;
+    skos:exactMatch wd:Q2095 .
+
+<https://data.lentera.example/id/kategori/kebutuhan-rumah> a skos:Concept ;
+    skos:inScheme <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:topConceptOf <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:prefLabel "Kebutuhan Rumah Tangga"@id ;
+    skos:exactMatch wd:Q1146001 .
+
+# --- Tingkat 2 (Subkategori Anak) ---
+
+<https://data.lentera.example/id/kategori/minuman-dingin> a skos:Concept ;
+    skos:inScheme <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:broader <https://data.lentera.example/id/kategori/minuman> ;
+    skos:prefLabel "Minuman Dingin"@id ;
+    skos:exactMatch wd:Q178593 .
+
+<https://data.lentera.example/id/kategori/minuman-seduh> a skos:Concept ;
+    skos:inScheme <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:broader <https://data.lentera.example/id/kategori/minuman> ;
+    skos:prefLabel "Minuman Seduh"@id ;
+    skos:exactMatch wd:Q8486 .
+
+<https://data.lentera.example/id/kategori/makanan-ringan> a skos:Concept ;
+    skos:inScheme <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:broader <https://data.lentera.example/id/kategori/makanan> ;
+    skos:prefLabel "Makanan Ringan"@id ;
+    skos:exactMatch wd:Q749316 .
+
+<https://data.lentera.example/id/kategori/bahan-pokok> a skos:Concept ;
+    skos:inScheme <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:broader <https://data.lentera.example/id/kategori/makanan> ;
+    skos:prefLabel "Bahan Pokok"@id ;
+    skos:exactMatch wd:Q7600777 .
+
+<https://data.lentera.example/id/kategori/pembersih> a skos:Concept ;
+    skos:inScheme <https://data.lentera.example/id/kategori/skema-utama> ;
+    skos:broader <https://data.lentera.example/id/kategori/kebutuhan-rumah> ;
+    skos:prefLabel "Pembersih Rumah"@id ;
+    skos:exactMatch wd:Q1929359 .

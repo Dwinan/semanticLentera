@@ -1,0 +1,32 @@
+# ==============================================================================
+# Kueri 6A: UNION sebagai tambal sementara sebelum ontologi dan penyelarasan
+# ==============================================================================
+PREFIX ex: <https://data.lentera.example/def#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?entitas ?nama
+WHERE {
+    {
+        ?entitas a ex:ProdukJual ;
+                 schema:name ?nama .
+    }
+    UNION
+    {
+        ?entitas a ex:Barang ;
+                 rdfs:label ?nama .
+    }
+}
+ORDER BY ?entitas
+
+# ==============================================================================
+# Kueri 6B: Setelah ontologi dan penyelarasan, UNION TIDAK DIPERLUKAN LAGI
+# ==============================================================================
+PREFIX schema: <https://schema.org/>
+
+SELECT DISTINCT ?entitas ?nama
+WHERE {
+    ?entitas a schema:Product ;
+             schema:name ?nama .
+}
+ORDER BY ?entitas

@@ -1,0 +1,19 @@
+# Kueri 2: Lintasan Properti (skos:broader+) untuk Hierarki Taksonomi
+# Tujuan: Mengambil seluruh produk yang berada di bawah kategori "Makanan"
+#         beserta subkategorinya (Makanan Ringan, Bahan Pokok).
+
+PREFIX ex: <https://data.lentera.example/def#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?barcode ?namaProduk ?labelSubkategori
+WHERE {
+    ?produk a schema:Product ;
+            schema:gtin13 ?barcode ;
+            schema:name ?namaProduk ;
+            schema:category ?subKat .
+    ?subKat skos:broader+ <https://data.lentera.example/id/kategori/makanan> ;
+            skos:prefLabel ?labelSubkategori .
+    FILTER(LANG(?namaProduk) = "id" && !REGEX(?namaProduk, "^[A-Z0-9 ]+$"))
+}
+ORDER BY ?labelSubkategori ?barcode
