@@ -1,7 +1,7 @@
 // Interaktivitas JS Sederhana untuk Toko Lentera
 document.addEventListener('DOMContentLoaded', () => {
-    // Auto-dismiss alert jika ada data-dismiss
-    const alerts = document.querySelectorAll('.alert[data-auto-dismiss]');
+    // Auto-dismiss alert / callout jika ada data-auto-dismiss
+    const alerts = document.querySelectorAll('.alert[data-auto-dismiss], .callout[data-auto-dismiss]');
     alerts.forEach(alert => {
         setTimeout(() => {
             alert.style.transition = 'opacity 0.4s ease';

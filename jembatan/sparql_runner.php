@@ -3,38 +3,38 @@ $queries = [
     'q1' => [
         'title' => 'Kueri 1: Agregasi Lintas-Sumber (GROUP BY + HAVING)',
         'file' => 'q1_restock_agregasi.rq',
-        'desc' => 'Menemukan produk yang stok perkiraannya (total penerimaan di Stokara - total penjualan di Kasira) berada di bawah ambang stok minimum.',
+        'desc' => 'Menemukan produk yang sisa stoknya (penerimaan di Stokara - penjualan di Kasira) berada di bawah ambang batas minimum.',
         'target' => 'Menjawab Pertanyaan Bisnis 1 (Ketersediaan Stok). Menghasilkan 7 produk kritis.'
     ],
     'q2' => [
         'title' => 'Kueri 2: Lintasan Properti Taksonomi (skos:broader+)',
         'file' => 'q2_kategori_hierarki.rq',
-        'desc' => 'Mengambil seluruh produk di bawah kategori "Makanan" beserta seluruh subkategorinya secara rekursif/transitif.',
-        'target' => 'Mendukung kedalaman hierarki kategori dinamis tanpa perlu mengubah struktur kueri.'
+        'desc' => 'Mengambil seluruh produk di bawah kategori "Makanan" beserta seluruh subkategorinya secara rekursif.',
+        'target' => 'Mendukung kedalaman hierarki kategori dinamis tanpa mengubah kueri.'
     ],
     'q3' => [
         'title' => 'Kueri 3: Pembentukan Graf Baru (CONSTRUCT ex:marginPerUnit)',
         'file' => 'q3_construct_margin.rq',
-        'desc' => 'Membentuk graf RDF Turtle baru yang menyematkan properti margin per unit ke setiap produk terintegrasi.',
+        'desc' => 'Membentuk graf RDF baru yang menyematkan margin keuntungan per unit ke setiap produk.',
         'target' => 'Menjawab Pertanyaan Bisnis 2 (Margin Tertinggi). Menghasilkan 12 triple margin.'
     ],
     'q4' => [
         'title' => 'Kueri 4: Pemeriksa Boolean (ASK Guard)',
         'file' => 'q4_ask_stok_kritis.rq',
-        'desc' => 'Memeriksa secara boolean apakah produk tertentu (Kopi Susu 250ml) saat ini berada di bawah stok minimum.',
-        'target' => 'Berfungsi sebagai security/validation guard di aplikasi. Mengembalikan nilai boolean true.'
+        'desc' => 'Memeriksa secara boolean apakah produk tertentu saat ini berada di bawah stok minimum.',
+        'target' => 'Berfungsi sebagai guard validasi di aplikasi. Mengembalikan true.'
     ],
     'q5' => [
         'title' => 'Kueri 5: Kueri Terfederasi Luar (SERVICE Wikidata)',
         'file' => 'q5_wikidata_service.rq',
-        'desc' => 'Memanggil SPARQL endpoint Wikidata resmi untuk memperkaya label bahasa Inggris dari kategori produk lokal.',
+        'desc' => 'Memanggil endpoint Wikidata untuk memperkaya label bahasa Inggris dari kategori produk.',
         'target' => 'Mendemonstrasikan keterhubungan data terbuka (Linked Open Data W3C).'
     ],
     'q6' => [
         'title' => 'Kueri 6: Komparasi UNION vs Eliminasi OWL',
         'file' => 'q6_union_vs_owl.rq',
-        'desc' => 'Memperlihatkan bahwa setelah aksioma ontologi diterapkan, blok UNION yang rumit tidak diperlukan lagi.',
-        'target' => 'Membuktikan nilai efisiensi pemodelan OWL dalam menyederhanakan kueri SPARQL.'
+        'desc' => 'Memperlihatkan efisiensi ontologi OWL yang meniadakan kebutuhan blok UNION yang repetitif.',
+        'target' => 'Membuktikan reduksi kompleksitas kueri SPARQL melalui pemodelan semantik.'
     ]
 ];
 
@@ -48,68 +48,80 @@ $code = file_get_contents(__DIR__ . '/sparql/' . $activeQ['file']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kueri SPARQL - Jembatan Semantik Toko Lentera</title>
+    <title>Kueri SPARQL &bull; Lentera Data Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <nav class="navbar">
-        <a href="../index.php" class="navbar-brand">
-            Toko Lentera <span>| Jembatan Semantik</span>
+        <a href="index.php" class="navbar-brand">
+            <span class="brand-dot"></span>
+            Lentera Data Hub
         </a>
-        <div class="nav-links">
-            <a href="../index.php">Portal Utama</a>
-            <a href="../kasira/index.php">Kasira (Kasir)</a>
-            <a href="../stokara/index.php">Stokara (Gudang)</a>
-            <a href="index.php">Jembatan Semantik</a>
-            <a href="restock.php">Daftar Restock</a>
-            <a href="sparql_runner.php" class="active">Kueri SPARQL</a>
+        <div class="nav-menu">
+            <a href="index.php" class="nav-link">Pusat Kendali</a>
+            <a href="restock.php" class="nav-link">Evaluasi Restock</a>
+            <a href="sparql_runner.php" class="nav-link active">Kueri SPARQL</a>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="page-header">
-            <span class="badge badge-bridge" style="font-size: 0.85rem; margin-bottom: 0.5rem;">SPARQL 1.1 Competency Queries</span>
-            <h1 class="page-title">Repositori Kueri SPARQL Toko Lentera</h1>
-            <p class="page-desc">Kumpulan kueri SPARQL standar W3C untuk mengeksplorasi graf pengetahuan gabungan Kasira & Stokara.</p>
-        </div>
+    <main class="container">
+        <header class="hero-header">
+            <h1 class="hero-title">Koleksi Kueri SPARQL</h1>
+            <p class="hero-desc">Spesifikasi kueri W3C SPARQL 1.1 untuk evaluasi graf data terdistribusi.</p>
+        </header>
 
-        <div class="tabs">
+        <!-- Clean Tabs Navigation -->
+        <div class="filter-tabs">
             <?php foreach ($queries as $k => $q): ?>
-                <a href="?q=<?php echo $k; ?>" class="tab-link <?php echo $k === $activeKey ? 'active' : ''; ?>">
+                <a href="?q=<?php echo $k; ?>" class="filter-tab <?php echo $k === $activeKey ? 'active' : ''; ?>">
                     <?php echo strtoupper($k); ?>
                 </a>
             <?php endforeach; ?>
         </div>
 
-        <div class="card" style="margin-bottom: 2rem;">
-            <div class="card-header">
-                <div>
-                    <h2 class="card-title"><?php echo htmlspecialchars($activeQ['title']); ?></h2>
-                    <p style="font-size: 0.88rem; color: #64748b; margin-top: 0.25rem;">
-                        Berkas: <code>jembatan/sparql/<?php echo $activeQ['file']; ?></code>
+        <section class="card" style="margin-bottom: 2rem;">
+            <div>
+                <div class="card-header">
+                    <div>
+                        <h2 class="card-title"><?php echo htmlspecialchars($activeQ['title']); ?></h2>
+                        <span class="text-muted" style="font-size: 0.8rem;">
+                            Berkas: <code>jembatan/sparql/<?php echo $activeQ['file']; ?></code>
+                        </span>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 0.5rem;">
+                        <strong>Deskripsi:</strong> <?php echo htmlspecialchars($activeQ['desc']); ?>
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--ink-secondary);">
+                        <strong>Target:</strong> <?php echo htmlspecialchars($activeQ['target']); ?>
                     </p>
                 </div>
-                <span class="badge badge-bridge">W3C SPARQL 1.1</span>
+
+                <div class="code-frame">
+                    <div class="code-header">
+                        <span><?php echo htmlspecialchars($activeQ['file']); ?></span>
+                        <span>SPARQL 1.1</span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code><?php echo htmlspecialchars($code); ?></code></pre>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
 
-            <div style="background: #f1f5f9; padding: 1rem; border-radius: var(--radius); margin-bottom: 1.25rem;">
-                <p style="font-size: 0.92rem; color: #1e293b; margin-bottom: 0.4rem;">
-                    <strong>Deskripsi & Tujuan:</strong> <?php echo htmlspecialchars($activeQ['desc']); ?>
-                </p>
-                <p style="font-size: 0.88rem; color: #0f766e;">
-                    <strong>Target Kompetensi:</strong> <?php echo htmlspecialchars($activeQ['target']); ?>
-                </p>
-            </div>
-
-            <label style="font-size: 0.85rem; font-weight: 700; color: #334155; margin-bottom: 0.4rem; display: block;">
-                Kode Kueri SPARQL:
-            </label>
-            <pre><code><?php echo htmlspecialchars($code); ?></code></pre>
+    <footer class="site-footer">
+        <div class="container footer-content" style="padding-top: 0; padding-bottom: 0;">
+            <div>Lentera Data Hub</div>
+            <div>W3C Semantic Standards</div>
         </div>
+    </footer>
 
-        <div class="footer-note">
-            Toko Lentera &bull; Arsitektur Jembatan Semantik Berbasis W3C RDF, OWL, dan SKOS
-        </div>
-    </div>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -23,24 +23,24 @@ $previewTitle = '';
 
 switch ($viewFile) {
     case 'kasira':
-        $previewTitle = 'kasira.ttl (Hasil Ekstraksi Kasira)';
-        $contentPreview = $kasiraTtlExists ? file_get_contents("{$outputDir}/kasira.ttl") : 'Belum diekspor. Klik tombol di atas.';
+        $previewTitle = 'kasira.ttl (Ekstraksi Kasira)';
+        $contentPreview = $kasiraTtlExists ? file_get_contents("{$outputDir}/kasira.ttl") : 'Belum diekspor.';
         break;
     case 'stokara':
-        $previewTitle = 'stokara.ttl (Hasil Ekstraksi Stokara)';
-        $contentPreview = $stokaraTtlExists ? file_get_contents("{$outputDir}/stokara.ttl") : 'Belum diekspor. Klik tombol di atas.';
+        $previewTitle = 'stokara.ttl (Ekstraksi Stokara)';
+        $contentPreview = $stokaraTtlExists ? file_get_contents("{$outputDir}/stokara.ttl") : 'Belum diekspor.';
         break;
     case 'penyelarasan':
-        $previewTitle = 'penyelarasan.ttl (Hasil owl:sameAs Berbasis Barcode)';
-        $contentPreview = $penyelarasanTtlExists ? file_get_contents("{$outputDir}/penyelarasan.ttl") : 'Belum diekspor. Klik tombol di atas.';
+        $previewTitle = 'penyelarasan.ttl (Penyelarasan sameAs)';
+        $contentPreview = $penyelarasanTtlExists ? file_get_contents("{$outputDir}/penyelarasan.ttl") : 'Belum diekspor.';
         break;
     case 'skos':
-        $previewTitle = 'kategori_skos.ttl (Skema Konsep Kategori SKOS)';
+        $previewTitle = 'kategori_skos.ttl (Taksonomi SKOS)';
         $contentPreview = file_get_contents(__DIR__ . '/kategori_skos.ttl');
         break;
     case 'ontologi':
     default:
-        $previewTitle = 'ontologi.ttl (Ontologi OWL & Aksioma Jembatan)';
+        $previewTitle = 'ontologi.ttl (Ontologi OWL)';
         $contentPreview = file_get_contents(__DIR__ . '/ontologi.ttl');
         break;
 }
@@ -50,126 +50,139 @@ switch ($viewFile) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jembatan Semantik - Toko Lentera</title>
+    <title>Pusat Kendali &bull; Lentera Data Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <nav class="navbar">
-        <a href="../index.php" class="navbar-brand">
-            Toko Lentera <span>| Jembatan Semantik</span>
+        <a href="index.php" class="navbar-brand">
+            <span class="brand-dot"></span>
+            Lentera Data Hub
         </a>
-        <div class="nav-links">
-            <a href="../index.php">Portal Utama</a>
-            <a href="../kasira/index.php">Kasira (Kasir)</a>
-            <a href="../stokara/index.php">Stokara (Gudang)</a>
-            <a href="index.php" class="active">Jembatan Semantik</a>
-            <a href="restock.php">Daftar Restock</a>
-            <a href="sparql_runner.php">Kueri SPARQL</a>
+        <div class="nav-menu">
+            <a href="index.php" class="nav-link active">Pusat Kendali</a>
+            <a href="restock.php" class="nav-link">Evaluasi Restock</a>
+            <a href="sparql_runner.php" class="nav-link">Kueri SPARQL</a>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="page-header">
-            <span class="badge badge-bridge" style="font-size: 0.85rem; margin-bottom: 0.5rem;">Semantic Web Bridge</span>
-            <h1 class="page-title">Pusat Kendali Jembatan Semantik Toko Lentera</h1>
-            <p class="page-desc">Integrasi heterogenitas data Kasira dan Stokara menjadi graf pengetahuan berstandar W3C (RDF, SKOS, OWL, SPARQL).</p>
-        </div>
+    <main class="container">
+        <header class="hero-header">
+            <h1 class="hero-title">Pusat Kendali Semantik</h1>
+            <p class="hero-desc">Generasi graf pengetahuan W3C dari data relasional Kasira dan Stokara.</p>
+        </header>
 
         <?php if ($exportResult): ?>
             <?php if ($exportResult['status'] === 'success'): ?>
-                <div class="alert alert-success" data-auto-dismiss>
-                    <strong>Sukses Sinkronisasi RDF!</strong> Berhasil menghasilkan berkas <code>kasira.ttl</code>, <code>stokara.ttl</code>, dan <code>penyelarasan.ttl</code> (menyelaraskan <?php echo $exportResult['aligned_count']; ?> produk ber-barcode sama).
+                <div class="callout" data-auto-dismiss>
+                    Sinkronisasi berhasil. <?php echo $exportResult['aligned_count']; ?> entitas produk diselaraskan ke dalam graf RDF.
                 </div>
             <?php else: ?>
-                <div class="alert alert-danger">
-                    <strong>Gagal Ekspor:</strong> <?php echo htmlspecialchars($exportResult['message']); ?>
+                <div class="callout callout-critical">
+                    Sinkronisasi gagal: <?php echo htmlspecialchars($exportResult['message']); ?>
                 </div>
             <?php endif; ?>
         <?php endif; ?>
 
-        <!-- Kartu Status & Aksi -->
-        <div class="grid grid-3" style="margin-bottom: 2rem;">
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="card-title">Status Sumber Data</h2>
-                </div>
-                <div style="font-size: 0.9rem; margin-bottom: 1rem;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                        <span>Kasira (Port 5433):</span>
-                        <?php if ($dbStatus['kasira']): ?>
-                            <span class="badge badge-success">Terhubung</span>
-                        <?php else: ?>
-                            <span class="badge badge-danger">Tidak Aktif</span>
-                        <?php endif; ?>
+        <!-- Panel Status & Aksi Utama: 3 Card Containers -->
+        <div class="grid grid-cols-3" style="margin-bottom: 2rem;">
+            <!-- Card 1: Pipeline Status & CTA Sinkronisasi -->
+            <section class="card">
+                <div>
+                    <div class="card-header">
+                        <h2 class="card-title">Status Basis Data</h2>
                     </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span>Stokara (Port 5434):</span>
-                        <?php if ($dbStatus['stokara']): ?>
-                            <span class="badge badge-success">Terhubung</span>
-                        <?php else: ?>
-                            <span class="badge badge-danger">Tidak Aktif</span>
-                        <?php endif; ?>
+                    <div style="font-size: 0.88rem; margin-bottom: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--line-subtle);">
+                            <span>Kasira (5433)</span>
+                            <span class="<?php echo $dbStatus['kasira'] ? '' : 'tag-critical'; ?>">
+                                <?php echo $dbStatus['kasira'] ? 'Terhubung' : 'Terputus'; ?>
+                            </span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
+                            <span>Stokara (5434)</span>
+                            <span class="<?php echo $dbStatus['stokara'] ? '' : 'tag-critical'; ?>">
+                                <?php echo $dbStatus['stokara'] ? 'Terhubung' : 'Terputus'; ?>
+                            </span>
+                        </div>
                     </div>
                 </div>
+
                 <form action="index.php" method="POST">
                     <input type="hidden" name="action" value="sync">
-                    <button type="submit" class="btn btn-bridge" style="width: 100%; justify-content: center;"
+                    <button type="submit" class="btn btn-primary" style="width: 100%;"
                             <?php echo (!$dbStatus['kasira'] || !$dbStatus['stokara']) ? 'disabled' : ''; ?>>
-                        Sinkronkan & Generate RDF (.ttl)
+                        Sinkronkan RDF (.ttl)
                     </button>
                 </form>
-            </div>
+            </section>
 
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="card-title">Aplikasi Restock</h2>
-                </div>
-                <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1.25rem;">
-                    Lihat hasil evaluasi keputusan bisnis: produk kritis di bawah stok minimum dan margin per unit tertinggi.
-                </p>
-                <a href="restock.php" class="btn btn-primary" style="width: 100%; justify-content: center;">
-                    Buka Dashboard Restock &rarr;
-                </a>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h2 class="card-title">Kueri SPARQL W3C</h2>
-                </div>
-                <p style="font-size: 0.88rem; color: #64748b; margin-bottom: 1.25rem;">
-                    Eksplorasi 5 kueri SPARQL standar (Agregasi, Hierarki SKOS, CONSTRUCT, ASK, SERVICE Wikidata) + komparasi UNION.
-                </p>
-                <a href="sparql_runner.php" class="btn btn-outline" style="width: 100%; justify-content: center;">
-                    Lihat Koleksi SPARQL &rarr;
-                </a>
-            </div>
-        </div>
-
-        <!-- Preview Berkas Semantik -->
-        <div class="card">
-            <div class="card-header">
+            <!-- Card 2: Tautan Evaluasi Restock -->
+            <section class="card">
                 <div>
-                    <h2 class="card-title"><?php echo htmlspecialchars($previewTitle); ?></h2>
-                    <small style="color: #64748b;">Pilih tab di bawah untuk memeriksa sintaks RDF Turtle</small>
+                    <div class="card-header">
+                        <h2 class="card-title">Keputusan Stok</h2>
+                    </div>
+                    <p style="margin-bottom: 1.5rem;">Evaluasi produk di bawah ambang batas minimum dan peringkat margin keuntungan unit.</p>
                 </div>
-                <span class="badge badge-bridge">Turtle Format (.ttl)</span>
-            </div>
+                <a href="restock.php" class="btn btn-secondary" style="width: 100%;">
+                    Buka Evaluasi Restock &rarr;
+                </a>
+            </section>
 
-            <div class="tabs">
-                <a href="?view=ontologi" class="tab-link <?php echo $viewFile === 'ontologi' ? 'active' : ''; ?>">ontologi.ttl (OWL)</a>
-                <a href="?view=skos" class="tab-link <?php echo $viewFile === 'skos' ? 'active' : ''; ?>">kategori_skos.ttl (SKOS)</a>
-                <a href="?view=penyelarasan" class="tab-link <?php echo $viewFile === 'penyelarasan' ? 'active' : ''; ?>">penyelarasan.ttl (sameAs)</a>
-                <a href="?view=kasira" class="tab-link <?php echo $viewFile === 'kasira' ? 'active' : ''; ?>">kasira.ttl</a>
-                <a href="?view=stokara" class="tab-link <?php echo $viewFile === 'stokara' ? 'active' : ''; ?>">stokara.ttl</a>
-            </div>
-
-            <pre><code><?php echo htmlspecialchars($contentPreview); ?></code></pre>
+            <!-- Card 3: Tautan Koleksi SPARQL -->
+            <section class="card">
+                <div>
+                    <div class="card-header">
+                        <h2 class="card-title">Kueri SPARQL</h2>
+                    </div>
+                    <p style="margin-bottom: 1.5rem;">Koleksi kueri semantik mencakup agregasi, inferensi SKOS rekursif, dan federasi Wikidata.</p>
+                </div>
+                <a href="sparql_runner.php" class="btn btn-secondary" style="width: 100%;">
+                    Buka Koleksi SPARQL &rarr;
+                </a>
+            </section>
         </div>
 
-        <div class="footer-note">
-            Toko Lentera &bull; Arsitektur Jembatan Semantik Berbasis W3C RDF, OWL, dan SKOS
+        <!-- Berkas Graf Turtle: Grounded Card Container -->
+        <section class="card">
+            <div>
+                <div class="card-header">
+                    <h2 class="card-title"><?php echo htmlspecialchars($previewTitle); ?></h2>
+                    <span class="text-muted" style="font-size: 0.8rem;">Format Turtle (.ttl)</span>
+                </div>
+
+                <div class="filter-tabs">
+                    <a href="?view=ontologi" class="filter-tab <?php echo $viewFile === 'ontologi' ? 'active' : ''; ?>">ontologi.ttl</a>
+                    <a href="?view=skos" class="filter-tab <?php echo $viewFile === 'skos' ? 'active' : ''; ?>">kategori_skos.ttl</a>
+                    <a href="?view=penyelarasan" class="filter-tab <?php echo $viewFile === 'penyelarasan' ? 'active' : ''; ?>">penyelarasan.ttl</a>
+                    <a href="?view=kasira" class="filter-tab <?php echo $viewFile === 'kasira' ? 'active' : ''; ?>">kasira.ttl</a>
+                    <a href="?view=stokara" class="filter-tab <?php echo $viewFile === 'stokara' ? 'active' : ''; ?>">stokara.ttl</a>
+                </div>
+
+                <div class="code-frame">
+                    <div class="code-header">
+                        <span><?php echo htmlspecialchars($viewFile . '.ttl'); ?></span>
+                        <span>W3C Turtle</span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code><?php echo htmlspecialchars($contentPreview); ?></code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content" style="padding-top: 0; padding-bottom: 0;">
+            <div>Lentera Data Hub</div>
+            <div>W3C Semantic Standards</div>
         </div>
-    </div>
+    </footer>
+
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
